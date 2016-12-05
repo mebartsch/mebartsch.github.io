@@ -1,2 +1,2 @@
 # mebartsch.github.io
-webstuff
+Dollar Word Readme
