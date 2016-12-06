@@ -9,16 +9,22 @@
     	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-	<!--    <script src="/scripts/counting_rabbits.js"></script> -->
-	<script type="text/javascript">
-
+	<!--    <script src="/scripts/counting_rabbits.js"></script> 
+	
+<script type="text/javascript">
 function doSomethingWithTextBox()
 {
   var textBox = document.getElementById('TEXTBOX_ID');
   // do something with it ...
+-->
 
 }
-
+<script type="text/javascript">
+function myAlert()
+{
+    alert("I am an event handler....");
+	return;
+}
 </script>
 	
   <body>
@@ -50,10 +56,16 @@ function doSomethingWithTextBox()
   +<input type="number" id="b" value="50">
   =<output name="x" for="a b"></output>
 </form>
--->
+
 		
 <input type="text" id="TEXTBOX_ID">
-doSomethingWithTextBox()
+<input name="buttonExecute" onclick="execute(doSomethingWithTextBox('txt1').value)" type="button" value="Execute" />
+-->
+		
+<span onmouseover="myAlert();">
+   Bring your mouse here to see an alert
+</span>
+()
 </body>
 
 	 	<footer class="site-footer">
