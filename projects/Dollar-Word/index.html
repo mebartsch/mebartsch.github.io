@@ -10,7 +10,6 @@
     	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
 	    <script src="/scripts/counting_rabbits.js"></script>
-
   <body>
   <!--
         	<section class="page-header">
@@ -24,9 +23,15 @@
 -->
 	 	   <p> Coming soon! </p> 
 
-	
+<!--	BUTTON TO RUN SCRIPT
   <input type="button" onclick="count_rabbits()" value="Count rabbits!"/>
-
+-->
+		
+  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+  <input type="range" id="a" value="50">100
+  +<input type="number" id="b" value="50">
+  =<output name="x" for="a b"></output>
+</form>
 
 </body>
 
