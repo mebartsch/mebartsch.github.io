@@ -9,7 +9,18 @@
     	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-	    <script src="/scripts/counting_rabbits.js"></script>
+	<!--    <script src="/scripts/counting_rabbits.js"></script> -->
+	<script type="text/javascript">
+
+function doSomethingWithTextBox()
+{
+  var textBox = document.getElementById('TEXTBOX_ID');
+  // do something with it ...
+
+}
+
+</script>
+	
   <body>
   <!--
         	<section class="page-header">
@@ -23,16 +34,26 @@
 -->
 	 	   <p> Coming soon! </p> 
 
-<!--	BUTTON TO RUN SCRIPT
-  <input type="button" onclick="count_rabbits()" value="Count rabbits!"/>
--->
+<!--	##BUTTON TO RUN SCRIPT
+  	<input type="button" onclick="count_rabbits()" value="Count rabbits!"/>
+
+	##Pass Variable from Input to script with button
+	<input name="textbox1" type="text" id="txt1"/>
+
+	##Pass Variable from Input to script with button
+	<input name="textbox1" type="text" id="txt1"/>
+	<input name="buttonExecute" onclick="execute(document.getElementById('txt1').value)" type="button" value="Execute" />
+
 		
   <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
   <input type="range" id="a" value="50">100
   +<input type="number" id="b" value="50">
   =<output name="x" for="a b"></output>
 </form>
-
+-->
+		
+<input type="text" id="TEXTBOX_ID">
+doSomethingWithTextBox()
 </body>
 
 	 	<footer class="site-footer">
