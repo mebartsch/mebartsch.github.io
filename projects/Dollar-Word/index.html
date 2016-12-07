@@ -32,7 +32,7 @@
 	  
 	  	<!-- HEADER -->
         <section class="page-header">
-      		<h1 class="project-name">Dollar Word Calculator</h1>
+      		<h1 class="project-name">Dollar Word Calculato</h1>
     	</section>
   </head>
 
@@ -76,8 +76,10 @@
 
 	               var sumtotal = sumtotal + newword.charAt(i).toUpperCase().charCodeAt()-64
                     }
-		    
-                    document.forms.sum.sum1.value = "sum = $" + (sumtotal/100).toFixed(2).toString()
+		     document.forms.form1.Text1.value = document.forms.form1.Text1.value
+		       	 +"--------------------------------------------"
+		         +"SUM = $" + (sumtotal/100).toFixed(2).toString()
+               //     document.forms.sum.sum1.value = "sum = $" + (sumtotal/100).toFixed(2).toString()
 		    document.getElementsByName('txt')[0].value = ""   //clear text box for next entry
                }   //end if enter pressed 
            }       //end function
