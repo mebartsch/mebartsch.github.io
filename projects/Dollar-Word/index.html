@@ -21,10 +21,6 @@
 		 background-color: #85bb65;
 	        }	
 		
-	    div{ 
-		text-align: center; 
-	       }	
-		
 	</style>
 	  
 	<h1> Dollar Word Calculator </h1> 
@@ -33,17 +29,17 @@
 	
       <body>	  
 	  
-	 <p>Enter a word to chec</p>
+	 <p>Enter a word to check</p>
 	  
-	 <form action="#">      <!-- form for entering data with event handler -->
-	   <input type="text" name="txt" onkeypress="handle(event)" />
-	 </form>
+	<form action="#">      <!-- form for entering data with event handler -->
+	  <input type="text" name="txt" onkeypress="handle(event)" />
+	</form>
 
 	<br>
 
-	  <form id="form1" >      <!-- TextArea Form for Data output -->
-	   <textarea name="Text1" style="font-size: 14pt"></textarea>
-    	  </form>
+	<form id="form1" >      <!-- TextArea Form for Data output -->
+	  <textarea name="Text1" style="font-size: 14pt"></textarea>
+    	</form>
 
         <script>
            function handle(e){
@@ -51,29 +47,35 @@
                     e.preventDefault();                                         // Ensure it is only this code that rusn
 		    var newword = document.getElementsByName('txt')[0].value    //get word from form
 		    var newword = newword.replace(/ /g,'')			//remove any spaces
-                    document.forms.form1.Text1.value = ""			//initialize form to blan
+                    document.forms.form1.Text1.value = ""			//initialize form to blank
                     var sumtotal = 0						//initialize sum to 0
 		    
+		    // loop for all needed line feeds to bottom align
                     for (var i = 20; i > newword.length+2; i--) {              
-	                document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)
+	                document.forms.form1.Text1.value = document.forms.form1.Text1.value
+				+String.fromCharCode(13)
                     }
   
                     for (var i = 0; i < newword.length; i++) {
+		      var newchar = newword.charAt(i).toUpperCase()
 	              document.forms.form1.Text1.value = document.forms.form1.Text1.value 
 		          + String.fromCharCode(13) 
-		          + newword.charAt(i).toUpperCase()
+		          + newchar
 		          + "          "
-		          + ((newword.charAt(i).toUpperCase().charCodeAt()-64)/100).toFixed(2).toString()
+		          + (newchar.charCodeAt()-64)/100).toFixed(2).toString()
 
-	               var sumtotal = sumtotal + newword.charAt(i).toUpperCase().charCodeAt()-64
+	               var sumtotal = sumtotal + newchar.charCodeAt()-64
                     }
+		       
+		     // add total at end
 		     document.forms.form1.Text1.value = document.forms.form1.Text1.value
 		         + String.fromCharCode(13) 
 		       	 +"------------------------------"
 		         + String.fromCharCode(13) 
 		         +"SUM = $" + (sumtotal/100).toFixed(2).toString()
-               //     document.forms.sum.sum1.value = "sum = $" + (sumtotal/100).toFixed(2).toString()
+		       
 		    document.getElementsByName('txt')[0].value = ""   //clear text box for next entry
+		       
                }   //end if enter pressed 
            }       //end function
         </script>
