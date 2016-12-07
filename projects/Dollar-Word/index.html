@@ -23,7 +23,7 @@
 		
 	</style>
 	  
-	<h1> Dollar Word Calculator </h1> 
+	<h1> Dollar Word Calculato </h1> 
 		
       </head>
 	
@@ -58,12 +58,14 @@
   
                     for (var i = 0; i < newword.length; i++) {
 		      var newchar = newword.charAt(i).toUpperCase()
+		      var newnumber = newchar.charCodeAt()-64
+
 	              document.forms.form1.Text1.value = document.forms.form1.Text1.value 
 		          + String.fromCharCode(13) 
 		          + newchar
 		          + "          "
-		          + ((newchar.charCodeAt()-64)/100).toFixed(2).toString()
-	               var sumtotal = sumtotal + newword.charAt(i).toUpperCase().charCodeAt()-64
+		          + (newnumber/100).toFixed(2).toString()
+	               var sumtotal = sumtotal + newnumber
                     }
 		       
 		     // add total at end
