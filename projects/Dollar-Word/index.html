@@ -78,7 +78,8 @@ for (var i = 0; i < newword.length; i++) {
 		+ (newword.charAt(i).toUpperCase().charCodeAt()-64).toString()
 	var sumtotal = sumtotal + newword.charAt(i).toUpperCase().charCodeAt()-64
 }
-document.forms.sum.sum1.value = sumtotal.toString()
+		sumtotal = (sumtotal/100).tofixed(2)
+document.forms.sum.sum1.value = "$"+sumtotal.toString()
         }
     }
 </script>
