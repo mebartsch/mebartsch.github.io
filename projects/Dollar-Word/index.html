@@ -67,7 +67,12 @@ for (var i = 20; i > newword.length+2; i--) {
 	document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)
 }
 for (var i = 0; i < newword.length; i++) {
-    	document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)+newword.charAt(i)+newword.charAt(i).charCodeAt()
+    	document.forms.form1.Text1.value = 
+		document.forms.form1.Text1.value
+		+String.fromCharCode(13)
+		+toUpperCase(newword.charAt(i))
+		+"          "
+		+toUpperCase(newword.charAt(i))(.charCodeAt()
 }
 
         }
