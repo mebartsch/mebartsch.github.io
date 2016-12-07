@@ -23,7 +23,7 @@
 		
 	</style>
 	  
-	<h1> Dollar Word Calculato </h1> 
+	<h1> Dollar Word Calculator </h1> 
 		
       </head>
 	
@@ -57,6 +57,7 @@
                     }
   
                     for (var i = 0; i < newword.length; i++) {
+		      var newchar = newword.charAt(i).toUpperCase()
 	              document.forms.form1.Text1.value = document.forms.form1.Text1.value 
 		          + String.fromCharCode(13) 
 		          + newword.charAt(i).toUpperCase()
