@@ -63,7 +63,7 @@
         if(e.keyCode === 13){
             e.preventDefault(); // Ensure it is only this code that rusn
 		var newword = document.getElementsByName('txt')[0].value
-
+		var newword = newword.replace(/ /g,'')
 document.forms.form1.Text1.value = ""	
 var sumtotal = 0
 for (var i = 20; i > newword.length+2; i--) {
@@ -71,13 +71,12 @@ for (var i = 20; i > newword.length+2; i--) {
 }
 for (var i = 0; i < newword.length; i++) {
     //	document.forms.form1.Text1.value = document.forms.form1.Text1.value + String.fromCharCode(13) +	toUpperCase(newword.charAt(i)) + "          " +	(toUpperCase(newword.charAt(i))).charCodeAt()
-   if(newword.charAt(i).toUpperCase().charCodeAt() > 63){
 	document.forms.form1.Text1.value = document.forms.form1.Text1.value 
 		+ String.fromCharCode(13) 
 		+ newword.charAt(i).toUpperCase()
 		+ "          "
 		+ (newword.charAt(i).toUpperCase().charCodeAt()-64).toString()
-   }
+
 	var sumtotal = sumtotal + newword.charAt(i).toUpperCase().charCodeAt()-64
 }
 		//sumtotal = (sumtotal/100).tofixed(2)
