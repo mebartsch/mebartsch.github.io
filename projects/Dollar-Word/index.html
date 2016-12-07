@@ -23,7 +23,7 @@
 		
 	</style>
 	  
-	<h1> Dollar Word Calculator </h1> 
+	<h1> Dollar Word Calculato </h1> 
 		
       </head>
 	
@@ -51,21 +51,23 @@
                     var sumtotal = 0						//initialize sum to 0
 		    
 		    // loop for all needed line feeds to bottom align
-           //         for (var i = 20; i > newword.length+2; i--) {              
-	     //           document.forms.form1.Text1.value = document.forms.form1.Text1.value
-	//			+String.fromCharCode(13)
-          //          }
-  
+                    for (var i = 20; i > newword.length+2; i--) {              
+	                document.forms.form1.Text1.value = document.forms.form1.Text1.value
+				+String.fromCharCode(13)
+                    }
+		       
+  		   // loop for each character
                     for (var i = 0; i < newword.length; i++) {
 		      var newchar = newword.charAt(i).toUpperCase()
 		      var newnumber = newchar.charCodeAt()-64
+		      var newdollar = newnumber/100.toFixed(2)
 
 	              document.forms.form1.Text1.value = document.forms.form1.Text1.value 
 		          + String.fromCharCode(13) 
 		          + newchar
 		          + "          "
-		          + (newnumber/100).toFixed(2).toString()
-	               var sumtotal = sumtotal + newnumber
+		          + newdollar.toString()
+	               var sumtotal = sumtotal + newdollar
                     }
 		       
 		     // add total at end
@@ -73,7 +75,7 @@
 		         + String.fromCharCode(13) 
 		       	 +"------------------------------"
 		         + String.fromCharCode(13) 
-		         +"SUM = $" + (sumtotal/100).toFixed(2).toString()
+		         +"SUM = $" + sumtotal.toString()
 		       
 		    document.getElementsByName('txt')[0].value = ""   //clear text box for next entry
 		       
