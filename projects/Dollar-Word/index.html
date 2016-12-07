@@ -50,7 +50,8 @@
 	<form action="#">
 		<input type="text" name="txt" onkeypress="handle(event)" />
 	</form>
-		
+	<br>
+	<br>
 	<form id="form1">
 		<textarea name="Text1" cols="40" rows="20"></textarea>
     	</form>
@@ -61,9 +62,11 @@
             e.preventDefault(); // Ensure it is only this code that rusn
 		var newword = document.getElementsByName('txt')[0].value
 	//	document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)+newword 
-
+for (var i = 20; i < newword.length+1; i--) 
+	document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)
+}
 for (var i = 0; i < newword.length; i++) {
-    document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)+newword.charAt(i)
+    document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)+newword.charAt(i)+newword.charAt(i).charCodeAt()
 }
 
         }
