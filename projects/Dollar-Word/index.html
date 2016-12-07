@@ -89,7 +89,7 @@ function myAlert()
     function handle(e){
         if(e.keyCode === 13){
             e.preventDefault(); // Ensure it is only this code that rusn
-		document.forms.form1.Text1.value = "Hello"
+		document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)+"Hello"
 
 	
 
