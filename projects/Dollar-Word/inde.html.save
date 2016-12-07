@@ -3,70 +3,94 @@
   <head>
 	<meta charset="UTF-8">
     	<title>Mebartsch.GitHub.io by mebartsch</title>
-   	<meta name="viewport" content="width=device-width, initial-scale=1">
+   	 <meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-   	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+   	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-	
-        <style type="text/css">
-            textarea {
- 	        background-color: White;
- 	        font size="65"
- 	        font-weight: bold;
- 	        font-family: Verdana, Arial, Helvetica, sans-serif;
- 	        border: 1px solid black;
-            }
-        </style>
+<style type="text/css">
+		  
+	textarea {
+ 	background-color: White;
+ 	font size="65"
+ 	font-weight: bold;
+ 	font-family: Verdana, Arial, Helvetica, sans-serif;
+ 	border: 1px solid black;
+}
+</style>
   </head>
 
   <body>
      	<section class="main-content">
 
+	 	   <p> Coming soon! </p> 
+
+<!--	##BUTTON TO RUN SCRIPT
+  	<input type="button" onclick="count_rabbits()" value="Count rabbits!"/>
+	##Pass Variable from Input to script with button
+	<input name="textbox1" type="text" id="txt1"/>
+	##Pass Variable from Input to script with button
+	<input name="textbox1" type="text" id="txt1"/>
+	<input name="buttonExecute" onclick="execute(document.getElementById('txt1').value)" type="button" value="Execute" />
+		
+		
+<input type="text" id="TEXTBOX_ID">
+<input name="buttonExecute" onclick="execute(doSomethingWithTextBox('txt1').value)" type="button" value="Execute" />
+-->
+<!--		
+<form action="#" onsubmit="handle">
+    <input type="text" name="txt" />
+</form>
+<script>
+    function handle(e){
+        e.preventDefault(); // Otherwise the form will be submitted
+        alert("FORM WAS SUBMITTED");
+    }
+</script>	
+-->
+
 	<p> Enter a word </p>
-	<form action="#">      <!-- form for entering data with event handler -->
+	<form action="#">
 		<input type="text" name="txt" onkeypress="handle(event)" />
 	</form>
-	
-	<br><br> 
-	
-	<form id="form1">      <!-- TextArea Form for Data output -->
+	<br>
+	<br>
+	<form id="form1">
 		<textarea name="Text1" cols="20" rows="22" ></textarea>
     	</form>
-	
-	<form id="sum">       <!-- Text form for sum output -->
+	<form id="sum">
 		<input type="text" name="sum1" />
 	</form>
-	
-        <script>
-           function handle(e){
-               if(e.keyCode === 13){
-                    e.preventDefault();                                         // Ensure it is only this code that rusn
-		    var newword = document.getElementsByName('txt')[0].value    //get word from form
-		    var newword = newword.replace(/ /g,'')			//remove any spaces
-                    document.forms.form1.Text1.value = ""			//initialize form to blan
-                    var sumtotal = 0						//initialize sum to 0
-		    
-                    for (var i = 20; i > newword.length+2; i--) {              
-	                document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)
-                    }
-		    
-                    for (var i = 0; i < newword.length; i++) {
-	                document.forms.form1.Text1.value = document.forms.form1.Text1.value 
-		          + String.fromCharCode(13) 
-		          + newword.charAt(i).toUpperCase()
-		          + "          "
-		          + (newword.charAt(i).toUpperCase().charCodeAt()-64).toString()
+<script>
+    function handle(e){
+        if(e.keyCode === 13){
+            e.preventDefault(); // Ensure it is only this code that rusn
+		var newword = document.getElementsByName('txt')[0].value
+		var newword = newword.replace(/ /g,'')
+document.forms.form1.Text1.value = ""	
+var sumtotal = 0
+for (var i = 20; i > newword.length+2; i--) {
+	document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)
+}
+for (var i = 0; i < newword.length; i++) {
+    //	document.forms.form1.Text1.value = document.forms.form1.Text1.value + String.fromCharCode(13) +	toUpperCase(newword.charAt(i)) + "          " +	(toUpperCase(newword.charAt(i))).charCodeAt()
+	document.forms.form1.Text1.value = document.forms.form1.Text1.value 
+		+ String.fromCharCode(13) 
+		+ newword.charAt(i).toUpperCase()
+		+ "          "
+		+ (newword.charAt(i).toUpperCase().charCodeAt()-64).toString()
+	var sumtotal = sumtotal + newword.charAt(i).toUpperCase().charCodeAt()-64
+}
+		//sumtotal = (sumtotal/100).tofixed(2)
+document.forms.sum.sum1.value = "sum = $" + (sumtotal/100).toFixed(2).toString()
+        }
+    }
+</script>
+		
+</body>
 
-	               var sumtotal = sumtotal + newword.charAt(i).toUpperCase().charCodeAt()-64
-                    }
-		    
-                    document.forms.sum.sum1.value = "sum = $" + (sumtotal/100).toFixed(2).toString()
-               }   //end if enter pressed 
-           }       //end function
-        </script>
+	 	<footer class="site-footer">
+		 </footer>
+   	 </section>
   </body>
-
-  <footer class="site-footer">
-  </footer>
 </html>
