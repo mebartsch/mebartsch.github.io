@@ -30,7 +30,7 @@
 	  
 	  	<!-- HEADER -->
         <section class="page-header">
-      		<h1 class="project-name">Dollar Word Calculato</h1>
+      		<h1 class="project-name">Dollar Word Calculator</h1>
     	</section>
   </head>
 
@@ -72,7 +72,7 @@
 		          + String.fromCharCode(13) 
 		          + newword.charAt(i).toUpperCase()
 		          + "          "
-		          + (newword.charAt(i).toUpperCase().charCodeAt()-64).toString()
+		          + ((newword.charAt(i).toUpperCase().charCodeAt()-64)/100).toFixed(2).toString()
 
 	               var sumtotal = sumtotal + newword.charAt(i).toUpperCase().charCodeAt()-64
                     }
