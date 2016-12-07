@@ -23,19 +23,19 @@
   <body>
      	<section class="main-content">
 
-	<p> Enter a word </p>
+	<p> Enter a word to check</p>
 	<form action="#">      <!-- form for entering data with event handler -->
-		<input type="text" name="txt" onkeypress="handle(event)" />
+	   <input type="text" name="txt" onkeypress="handle(event)" />
 	</form>
 	
 	<br><br> 
 	
 	<form id="form1">      <!-- TextArea Form for Data output -->
-		<textarea name="Text1" cols="20" rows="22" ></textarea>
+	   <textarea name="Text1" cols="20" rows="22" ></textarea>
     	</form>
 	
 	<form id="sum">       <!-- Text form for sum output -->
-		<input type="text" name="sum1" />
+	   <input type="text" name="sum1" />
 	</form>
 	
         <script>
@@ -62,6 +62,7 @@
                     }
 		    
                     document.forms.sum.sum1.value = "sum = $" + (sumtotal/100).toFixed(2).toString()
+		    document.getElementsByName('txt')[0].value = ""   //clear text box for next entry
                }   //end if enter pressed 
            }       //end function
         </script>
