@@ -14,7 +14,7 @@
  	        background-color: white;
                 width: 300px;
                 height: 400px;		    
- 	        font size=20px
+ 	        font size=40px
  	        font-weight: bold;
  	        font-family: Verdana, Arial, Helvetica, sans-serif;
  	   /*    border: 1px solid black;  */
@@ -30,7 +30,7 @@
 	  
 	  	<!-- HEADER -->
         <section class="page-header">
-      		<h1 class="project-name">Dollar Word Calculator</h1>
+      		<h1 class="project-name">Dollar Word Calculato</h1>
     	</section>
   </head>
 
@@ -66,9 +66,9 @@
                     for (var i = 20; i > newword.length+2; i--) {              
 	                document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)
                     }
-		    
+  
                     for (var i = 0; i < newword.length; i++) {
-	                document.forms.form1.Text1.value = document.forms.form1.Text1.value 
+	              document.forms.form1.Text1.value = document.forms.form1.Text1.value 
 		          + String.fromCharCode(13) 
 		          + newword.charAt(i).toUpperCase()
 		          + "          "
