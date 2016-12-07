@@ -23,7 +23,7 @@
 		
 	</style>
 	  
-	<h1> Dollar Word Calculato </h1> 
+	<h1> Dollar Word Calculator </h1> 
 		
       </head>
 	
@@ -62,7 +62,7 @@
 		          + String.fromCharCode(13) 
 		          + newchar
 		          + "          "
-		          + ((newword.charAt(i).toUpperCase().charCodeAt()-64)/100).toFixed(2).toString()
+		          + ((newchar.charCodeAt()-64)/100).toFixed(2).toString()
 	               var sumtotal = sumtotal + newword.charAt(i).toUpperCase().charCodeAt()-64
                     }
 		       
