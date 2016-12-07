@@ -62,7 +62,9 @@
 		var newword = document.getElementsByName('txt')[0].value
 		document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)+newword
 
-	
+for (var i = 0; i < newword.length; i++) {
+    document.forms.form1.Text1.value = document.forms.form1.Text1.value+String.fromCharCode(13)+newwords.charAt(i)
+}
 
         }
     }
