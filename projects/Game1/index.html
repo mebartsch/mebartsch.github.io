@@ -7,7 +7,7 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 6 </h1>
+	  <h1> TEMP 1 </h1>
   </head>
   <body>
 <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;"></canvas> 
@@ -31,7 +31,7 @@ function dealWithKeyboard(e) {
 function mover(x,y,e) {
    if (e.keyCode == "68" || e.keyCode == "100")  {    //only if "D" pressed
       for(var a = 0; a < 300; a++) {
-	setTimeout(draw(x+a,y,x+a+1,y),100)     
+	draw(x+a,y,x+a+1,y)   
       }
    }
    if (e.keyCode == "65" || e.keyCode == "97") {    //only if "A" pressed
@@ -51,12 +51,13 @@ function mover(x,y,e) {
    }		
 }	
 	   
-function draw(x1,y1,x2,y2) {
+setTimeout( function draw(x1,y1,x2,y2) {
 	ctx.beginPath();
 	ctx.moveTo(x1,y1);
 	ctx.lineTo(x2,y2);
 	ctx.stroke();
-}	   
+	},100);
+	   
 function sleep(milliseconds) {
   var start = new Date().getTime();
   for (var i = 0; i < 1e7; i++) {
