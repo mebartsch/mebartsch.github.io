@@ -7,22 +7,23 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 2 </h1>
+	  <h1> TEMP 3 </h1>
   </head>
   <body>
 
 <!--	  <body onload="draw();"> -->
-<input type="text" onkeypress="draw()">
 
 		  
 <canvas id="Canvas" width="600" height="600" style="border:1px solid #000000;"></canvas> 
 
     <script>
+	    
+	window.addEventListener("keypress", draw());
 
         var fixedcenteri = 0;
         var fixedcenterj = 0;
 
-        function draw () {
+        function draw() {
             var elem = document.getElementById('Canvas');
             var cx = elem.getContext('2d');
 
