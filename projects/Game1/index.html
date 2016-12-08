@@ -1,48 +1,28 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-	<meta charset="UTF-8">
-    	<title>Mebartsch.GitHub.io by mebartsch</title>
-   	<meta name="viewport" content="width=device-width, initial-scale=1">
-   	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+	  <h1> TEMP 1 </h1>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
 
- 
-	<h1>temp 1</h1> 
-		
-</head>
+      context.beginPath();
+      context.moveTo(100, 150);
+      context.lineTo(450, 50);
+      context.lineWidth = 10;
 
-<body>	  
-	<canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;">
-	</canvas>	
-	
-        <script>
-		
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.moveTo(0,0);
-ctx.lineTo(200,100);
-ctx.strokeStyle = '#ff0000';
-ctx.stroke();
-
-}
-		
-/* function startGame() {
-    myGameArea.start();
-}
-
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-    }
-}  */
-        </script>
-</body>
-
-<footer>
-</footer>
-</html>
+      // set line color
+      context.strokeStyle = '#ff0000';
+      context.stroke();
+    </script>
+  </body>
+</html>      
