@@ -25,6 +25,9 @@ function dealWithKeyboard(e) {
     mover(x,y,e);
 }
 	   
+var FPS = 30;
+setInterval(function() {update(); draw();}, 1000/FPS);	
+	   
 function mover(x,y,e) {
    if (e.keyCode == "68" || e.keyCode == "100")  {    //only if "D" pressed
       for(var a = 0; a < 300; a++) {
