@@ -7,7 +7,7 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 3 </h1>
+	  <h1> TEMP 1 </h1>
   </head>
   <body>
 
@@ -38,20 +38,20 @@
 
    if (e.keyCode == "68" || e.keyCode == "100")  {    //only if "d" pressed
 
-              if(fixedcenterj < w) {  fixedcenterj++; }
+              if(fixedcenteri < w && fixedcenteri > -1) {  fixedcenteri++; }
    }
    if (e.keyCode == "88" || e.keyCode == "120")  {    //only if "x" pressed
 		
-              if(fixedcenteri < h) {  fixedcenteri++; }
+              if(fixedcenterj < h && fixedcenterj > -1) {  fixedcenterj++; }
    }
 		   if (e.keyCode == "65" || e.keyCode == "97")  {    //only if "a" pressed
-              if(fixedcenterj < w) {  fixedcenterj--; }
+              if(fixedcenteri < w && fixedcenteri > -1) {  fixedcenteri--; }
    }
    if (e.keyCode == "87" || e.keyCode == "119")  {    //only if "w" pressed
 		
-              if(fixedcenteri < h) {  fixedcenteri--; }
+              if(fixedcenterj < h && fixedcenterj > -1) {  fixedcenterj--; }
    }
-                setTimeout(draw, 10);
+             //   setTimeout(draw, 10);
         }
 
 
