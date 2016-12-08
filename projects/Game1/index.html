@@ -10,20 +10,21 @@
 	  <h1> TEMP 3 </h1>
   </head>
   <body>
-    <canvas id="myCanvas" width="600" height="600" border: 1px solid blue;></canvas>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;></canvas>
     <script>
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
 var x=300
 var y=300
-      context.beginPath();
-      context.moveTo(x, y);
-      context.lineTo(450, 50);
-      context.lineWidth = 1;
+for (i = 0; i < 100; i++) { 
 
-      // set line color
+      context.beginPath();
+      context.moveTo(x+i, y);
+      context.lineTo(x+i+1, y);
+      context.lineWidth = 1;
       context.strokeStyle = '#ff0000';
       context.stroke();
+}							 
     </script>
   </body>
 </html>      
