@@ -22,32 +22,41 @@
 
         var fixedcenteri = 0;
         var fixedcenterj = 0;
-
+	var up = 0
+	var down = 0
+	var right = 0
+	var left = 0
+	
         function draw(e) {
             var elem = document.getElementById('Canvas');
             var cx = elem.getContext('2d');
 
             w = elem.width;
             h = elem.height;
-
+		
+   if (e.keyCode == "68" || e.keyCode == "100")  { right=1;left=0;up=0;down=0 }//only if "d" pressed
+   if (e.keyCode == "65" || e.keyCode == "97")  { right=0;left=1;up=0;down=0   //only if "a" pressed
+   if (e.keyCode == "88" || e.keyCode == "120")  { right=0;left=0;up=0;down=1    //only if "x" pressed
+   if (e.keyCode == "87" || e.keyCode == "119")  { right=0;left=0;up=1;down=0   //only if "w" pressed
+		
       //      cx.fillStyle = "white";
        //     cx.fillRect(0,0,w,h);
 
             cx.fillStyle = 'blue';
             cx.fillRect(fixedcenteri, fixedcenterj, 1, 1);
 
-   if (e.keyCode == "68" || e.keyCode == "100")  {    //only if "d" pressed
+   if (right==1)  {    //only if "d" pressed
 
               if(fixedcenteri < w && fixedcenteri > -1) {  fixedcenteri++; }
    }
-   if (e.keyCode == "88" || e.keyCode == "120")  {    //only if "x" pressed
+   if (down==1)  {    //only if "x" pressed
 		
               if(fixedcenterj < h && fixedcenterj > -1) {  fixedcenterj++; }
    }
-		   if (e.keyCode == "65" || e.keyCode == "97")  {    //only if "a" pressed
+    if (left==1)  {    //only if "a" pressed
               if(fixedcenteri < w && fixedcenteri > -1) {  fixedcenteri--; }
    }
-   if (e.keyCode == "87" || e.keyCode == "119")  {    //only if "w" pressed
+   if (up==1)  {    //only if "w" pressed
 		
               if(fixedcenterj < h && fixedcenterj > -1) {  fixedcenterj--; }
    }
