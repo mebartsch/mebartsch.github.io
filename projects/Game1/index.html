@@ -10,14 +10,17 @@
 	  <h1> TEMP 1 </h1>
   </head>
   <body>
-	  
-<body onload="draw();">
+
+<!--	  <body onload="draw();"> -->
+<input type="text" onkeypress="draw()">
+
+		  
 <canvas id="Canvas" width="600" height="600" style="border:1px solid #000000;"></canvas> 
 
     <script>
 
-        var fixedcenteri = 0;
-        var fixedcenterj = 0;
+        var fixedcenteri = 300;
+        var fixedcenterj = 300;
 
         function draw () {
             var elem = document.getElementById('Canvas');
@@ -32,15 +35,12 @@
             cx.fillStyle = 'blue';
             cx.fillRect(fixedcenteri, fixedcenterj, 1, 1);
 
-        //    if(fixedcenteri < 50) {
-        //        if(fixedcenterj < 40) {
-                    fixedcenterj++;
-       //         } else {
-        //            fixedcenterj = 0;
-              if(fixedcenteri < h/2) {  fixedcenteri++; }
-       //         }
+
+              if(fixedcenterj < w) {  fixedcenterj++; }
+
+              if(fixedcenteri < h) {  fixedcenteri++; }
+
                 setTimeout(draw, 10);
-       //     }
         }
 
 
