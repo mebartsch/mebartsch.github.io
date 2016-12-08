@@ -7,7 +7,7 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 4 </h1>
+	  <h1> TEMP 5 </h1>
   </head>
   <body>
 <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;"></canvas> 
@@ -20,53 +20,43 @@ var x=300
 var y=300
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+
+var FPS = 30;
+setInterval(function() {update(); draw();}, 1000/FPS);	
 	   
 function dealWithKeyboard(e) {
     mover(x,y,e);
 }
-	   
-var FPS = 30;
-setInterval(function() {update(); draw();}, 1000/FPS);	
-	   
+
 function mover(x,y,e) {
    if (e.keyCode == "68" || e.keyCode == "100")  {    //only if "D" pressed
       for(var a = 0; a < 300; a++) {
-//	sleep(100)
-	ctx.beginPath();
-	ctx.moveTo(x+a,y);
-	ctx.lineTo(x+1+a,y);
-	ctx.stroke();
+	draw(x+a,y,x+a+1,y)      
       }
    }
    if (e.keyCode == "65" || e.keyCode == "97") {    //only if "A" pressed
       for(var a = 0; a < 300; a++) {
-//	sleep(100)	      
-	ctx.beginPath();
-	ctx.moveTo(x-a,y);
-	ctx.lineTo(x-1-a,y);
-	ctx.stroke();
+	draw(x-a,y,x-a-1,y)      
       }
    }	
    if (e.keyCode == "88" || e.keyCode == "120") {    //only if "x" pressed
       for(var a = 0; a < 300; a++) {
-//	sleep(100)	      
-	ctx.beginPath();
-	ctx.moveTo(x,y+a);
-	ctx.lineTo(x,y+a+1);
-	ctx.stroke();
+	draw(x,y+a,x,y+a+1)
       }
    }
    if (e.keyCode == "87" || e.keyCode == "119") {    //only if "w" pressed
       for(var a = 0; a < 300; a++) {
-	sleep(100)	      
-	ctx.beginPath();
-	ctx.moveTo(x,y-a);
-	ctx.lineTo(x,y-a-1);
-	ctx.stroke();
+	draw(x,y-a,x,y-a-1)
       }
    }		
 }	
 	   
+function draw(x1,y1,x2,y2) {
+	ctx.beginPath();
+	ctx.moveTo(x1,y1);
+	ctx.lineTo(x2,y2);
+	ctx.stroke();
+}	   
 function sleep(milliseconds) {
   var start = new Date().getTime();
   for (var i = 0; i < 1e7; i++) {
