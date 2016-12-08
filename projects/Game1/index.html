@@ -7,14 +7,15 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 1 </h1>
+	  <h1> TEMP 2 </h1>
   </head>
   <body>
-    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <canvas id="myCanvas" width="600" height="600" border: 1px solid blue;></canvas>
     <script>
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
-
+var x=300
+var y=300
       context.beginPath();
       context.moveTo(100, 150);
       context.lineTo(450, 50);
