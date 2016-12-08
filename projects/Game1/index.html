@@ -19,8 +19,12 @@
 var c=document.getElementById("myCanvas");
 var ctx=c.getContext("2d");
 ctx.beginPath();
-ctx.moveTo(300,300);
-ctx.lineTo(300,150);
+	var x = 300
+	var y = 300
+ctx.moveTo(x,y);
+for (i = 0; i < 200; i++) { 
+	ctx.lineTo(x,y+1);
+}
 ctx.stroke();	
 		
 /* function startGame() {
