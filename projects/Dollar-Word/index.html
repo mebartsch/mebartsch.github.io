@@ -23,7 +23,7 @@
 		
 	</style>
 	  
-	<h1> Dollar Word Calculator </h1> 
+	<h1> Dollar Word Calculato </h1> 
 		
       </head>
 	
@@ -66,7 +66,7 @@
 		          + newchar
 		          + "          "
 		          + newcost.toString()
-	               var sumtotal = sumtotal + newnumber
+	               var sumtotal = sumtotal + newcost
                     }
 		       
 		     // add total at end
@@ -74,7 +74,7 @@
 		         + String.fromCharCode(13) 
 		       	 +"------------------------------"
 		         + String.fromCharCode(13) 
-		         +"SUM = $" + (sumtotal/100).toFixed(2).toString()
+		         +"SUM = $" + sumtotal.toString()
 		       
 		    document.getElementsByName('txt')[0].value = ""   //clear text box for next entry
 		       
