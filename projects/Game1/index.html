@@ -7,7 +7,7 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 1 </h1>
+	  <h1> TEMP 2 </h1>
   </head>
   <body>
 <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;"></canvas> 
@@ -22,18 +22,26 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 	   
 function dealWithKeyboard(e) {
-    move_right(x,y);
+    move(x,y);
 }
 	   
-function move_right(x,y) {	   
-   for(var a = 0; a < 200; a++) {
-	
+function move(x,y) {
+   if (e.keyCode == "68") {    //only if "D" pressed
+      for(var a = 0; a < 300; a++) {
 	ctx.beginPath();
 	ctx.moveTo(x+a,y);
 	ctx.lineTo(x+1+a,y);
-	  
 	ctx.stroke();
+      }
    }
+   if (e.keyCode == "65") {    //only if "A" pressed
+      for(var a = 0; a < 300; a++) {
+	ctx.beginPath();
+	ctx.moveTo(x-a,y);
+	ctx.lineTo(x-1-a,y);
+	ctx.stroke();
+      }
+   }	
 }	   
     </script>
   </body>
