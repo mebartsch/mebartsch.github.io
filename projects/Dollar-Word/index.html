@@ -23,7 +23,7 @@
 		
 	</style>
 	  
-	<h1> The Word Calculator </h1> 
+	<h1> The Word Calculatr </h1> 
 		
 </head>
 	
@@ -47,8 +47,8 @@
                     e.preventDefault();                                         // Ensure it is only this code that rusn
 		    var newword = document.getElementsByName('txt')[0].value    //get word from form
 		    var newword = newword.replace(/ /g,'')			//remove any spaces
-    //                document.forms.form1.Text1.value = ""			//initialize form to blank
-    //                var sumtotal = 0						//initialize sum to 0
+                    document.forms.form1.Text1.value = ""			//initialize form to blank
+    	              var sumtotal = 0						//initialize sum to 0
 		    
 		    // loop for all needed line feeds to bottom align
    //                 for (var i = 20; i > newword.length+2; i--) {              
@@ -76,7 +76,7 @@
 //		         + String.fromCharCode(13) 
 //		         +"SUM = $" + (sumtotal/100).toFixed(2).toString()
 		       
-//		    document.getElementsByName('txt')[0].value = ""   //clear text box for next entry
+		    document.getElementsByName('txt')[0].value = ""   //clear text box for next entry
 		       
            }       //end if enter pressed 
          }       //end function
