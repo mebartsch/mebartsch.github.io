@@ -7,7 +7,7 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 3 </h1>
+	  <h1> TEMP 1 </h1>
   </head>
   <body>
 
@@ -18,12 +18,12 @@
 
     <script>
 	    
-	window.addEventListener("keypress", draw());
+	window.addEventListener("keypress", draw, false);
 
         var fixedcenteri = 0;
         var fixedcenterj = 0;
 
-        function draw() {
+        function draw(e) {
             var elem = document.getElementById('Canvas');
             var cx = elem.getContext('2d');
 
