@@ -7,19 +7,22 @@
    	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
  
-	<h1>temp 4</h1> 
+	<h1>temp 1</h1> 
 		
 </head>
+
+<body>	  
 	<canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;">
 	</canvas>	
-<body>	  
-	  
+	
         <script>
 		
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineTo(200,100);
+ctx.strokeStyle = '#ff0000';
 ctx.stroke();
 
 }
