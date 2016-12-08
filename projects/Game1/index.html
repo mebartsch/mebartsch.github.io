@@ -7,7 +7,7 @@
    	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
  
-	<h1>temp 2</h1> 
+	<h1>temp 3</h1> 
 		
 </head>
 	<canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;">
@@ -24,8 +24,9 @@ ctx.beginPath();
 ctx.moveTo(x,y);
 for (i = 0; i < 300; i++) { 
 	ctx.lineTo(x,y+1);
+	ctx.stroke();	
+
 }
-ctx.stroke();	
 		
 /* function startGame() {
     myGameArea.start();
