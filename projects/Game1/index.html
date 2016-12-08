@@ -31,6 +31,7 @@ function dealWithKeyboard(e) {
 function mover(x,y,e) {
    if (e.keyCode == "68" || e.keyCode == "100")  {    //only if "D" pressed
       for(var a = 0; a < 300; a++) {
+	 sleep(10)
 	draw(x+a,y,x+a+1,y)      
       }
    }
