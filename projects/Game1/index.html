@@ -7,7 +7,7 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 5 </h1>
+	  <h1> TEMP 6 </h1>
   </head>
   <body>
 <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;"></canvas> 
@@ -17,11 +17,14 @@ var x=300
 var y=300
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.moveTo(x,y);
-ctx.lineTo(x+100,y);
+for(var a = 1; a < 100; a++) {
+	
+	ctx.beginPath();
+	ctx.moveTo(x+a,y);
+	ctx.lineTo(x+1+a,y);
 	  
-ctx.stroke();
+	ctx.stroke();
+}
 	   
     </script>
   </body>
