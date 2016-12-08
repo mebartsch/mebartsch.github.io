@@ -7,7 +7,7 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 3 </h1>
+	  <h1> TEMP 4 </h1>
   </head>
   <body>
 <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;"></canvas> 
@@ -55,7 +55,7 @@ function mover(x,y,e) {
    }
    if (e.keyCode == "87" || e.keyCode == "119") {    //only if "w" pressed
       for(var a = 0; a < 300; a++) {
-	sleep(1)	      
+	sleep(100)	      
 	ctx.beginPath();
 	ctx.moveTo(x,y-a);
 	ctx.lineTo(x,y-a-1);
