@@ -11,14 +11,19 @@
   </head>
   <body>
 <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;"></canvas> 
-	
+	  
    <script>
+	   
+window.addEventListener("keypress", dealWithKeyboard, false);
+
 var x=300
 var y=300
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 	   
-move_right(x,y);
+function dealWithKeyboard(e) {
+    move_right(x,y);
+}
 	   
 function move_right(x,y) {	   
    for(var a = 0; a < 200; a++) {
