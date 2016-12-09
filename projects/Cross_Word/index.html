@@ -136,7 +136,10 @@ function checkClicked(){
 }
 //Clue Button
 function clueClicked(){
+	
 	if (currentTextInput != null){
+		hintsLeft--
+		document.getElementById('myButton').innerHTML = "temp";
 		var temp1 = currentTextInput;
 		var token = temp1.split("_");
 		var row = token[1];
@@ -195,7 +198,7 @@ function solveClicked(){
 	<tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
 	<td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
 	<td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
-	<td><input class="butt"  type="submit" value="Hint 5left" onclick="clueClicked()"></td></tr>
+	<td><input class="butt"  id="myButton" type="submit" value="Hint (5 left)" onclick="clueClicked()"></td></tr>
 </table>
 </div>
 <table id="hintsTable">
