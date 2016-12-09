@@ -139,7 +139,7 @@ function clueClicked(){
 	
 	if (currentTextInput != null){
 		hintsLeft--;
-		document.getElementById(hintbutton).innerText = "1";
+		document.getElementById(hintbutton).innerHTML = "1";
 		var temp1 = currentTextInput;
 		var token = temp1.split("_");
 		var row = token[1];
