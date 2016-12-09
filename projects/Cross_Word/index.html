@@ -35,7 +35,7 @@ td{
 }
 .butt{
 	height:50px;
-	width: 107px;
+	width: 120px;
 }
 #puzzel{
 	text-align: center;
@@ -61,7 +61,7 @@ td{
 //Globals
 var currentTextInput;
 var puzzelArrayData;
-var hintsLeft =5;
+var hintsLeft = 5;
 //Loads the Crossword
 function initializeScreen(){
 	var puzzelTable = document.getElementById("puzzel");
@@ -195,7 +195,7 @@ function solveClicked(){
 	<tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
 	<td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
 	<td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
-	<td><input class="butt"  type="submit" value="'Hint' + hintsLeft" onclick="clueClicked()"></td></tr>
+	<td><input class="butt"  type="submit" value="Hint 5left" onclick="clueClicked()"></td></tr>
 </table>
 </div>
 <table id="hintsTable">
