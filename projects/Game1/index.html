@@ -7,7 +7,7 @@
         padding: 0px;
       }
     </style>
-	  <h1> TEMP 3 </h1>
+	  <h1> TEMP 1 </h1>
   </head>
   <body>
 
@@ -18,7 +18,7 @@
 
     <script>
 	    
-	window.addEventListener("keypress", changedir, false);
+	window.addEventListener("keypress", dealWithKeyboard, false);
 
         var fixedcenteri = 0;
         var fixedcenterj = 0;
@@ -26,14 +26,7 @@
 	var xdown = 0;
 	var xright = 0;
 	var xleft = 0;
-	
-function changedir(e){	
-	if (e.keyCode == "68" || e.keyCode == "100")  { xright=1;xleft=0;xup=0;xdown=0; }//only if "d" pressed
-   	if (e.keyCode == "65" || e.keyCode == "97")  { xright=0;xleft=1;xup=0;xdown=0; }   //only if "a" pressed
-   	if (e.keyCode == "88" || e.keyCode == "120")  { xright=0;xleft=0;xup=0;xdown=1; }   //only if "x" pressed
-   	if (e.keyCode == "87" || e.keyCode == "119")  { xright=0;xleft=0;xup=1;xdown=0;  } //only if "w" pressed
-	draw;
-}
+	    
         function draw() {
             var elem = document.getElementById('Canvas');
             var cx = elem.getContext('2d');
@@ -49,23 +42,52 @@ function changedir(e){
             cx.fillStyle = 'blue';
             cx.fillRect(fixedcenteri, fixedcenterj, 1, 1);
 
- //  if (xright==1)  {    //only if "d" pressed
+   if (xright=="1")  {    //only if "d" pressed
 
               if(fixedcenteri < w && fixedcenteri > -1) {  fixedcenteri++; }
-//   }
-   if (xdown==1)  {    //only if "x" pressed
+  }
+   if (xdown=="1")  {    //only if "x" pressed
 		
               if(fixedcenterj < h && fixedcenterj > -1) {  fixedcenterj++; }
    }
-    if (xleft==1)  {    //only if "a" pressed
+    if (xleft=="1")  {    //only if "a" pressed
               if(fixedcenteri < w && fixedcenteri > -1) {  fixedcenteri--; }
    }
-   if (xup==1)  {    //only if "w" pressed
+   if (xup=="1")  {    //only if "w" pressed
 		
               if(fixedcenterj < h && fixedcenterj > -1) {  fixedcenterj--; }
    }
                 setTimeout(draw, 100); 
-        }
+        }	
+	    
+function dealWithKeyboard(e){	
+	if (e.keyCode == "68" || e.keyCode == "100")  { 
+		xright=1; 
+		xleft=0; 
+		xup=0; 
+		xdown=0; 
+	}//only if "d" pressed
+   	if (e.keyCode == "65" || e.keyCode == "97")  { 
+		xright=0; 
+		xleft=1; 
+		xup=0; 
+		xdown=0; 
+	}   //only if "a" pressed
+   	if (e.keyCode == "88" || e.keyCode == "120")  { 
+		xright=0; 
+		xleft=0; 
+		xup=0; 
+		xdown=1; 
+	}   //only if "x" pressed
+   	if (e.keyCode == "87" || e.keyCode == "119")  { 
+		xright=0; 
+		xleft=0; 
+		xup=1; 
+		xdown=0;  
+	} //only if "w" pressed
+	setTimeout(draw, 100);
+}
+
 
 
 /*	   
