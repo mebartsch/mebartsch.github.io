@@ -8,40 +8,26 @@
 	  
     <style>	
 	    
-'	html { 
-'  	  background: url(https://cloud.githubusercontent.com/assets/24393098/21158603/b0cae644-c132-11e6-872f-a3fb8f63b586.jpg) no-repeat center center fixed; 
-'  	  -webkit-background-size: cover;
-'  	  -moz-background-size: cover;
-'  	  -o-background-size: cover;
-'  	  background-size: cover;
-'	}
-	    
-#bg {
-  position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%;
+body{height:100%;
+   width:100%;
+   background-image:url(https://cloud.githubusercontent.com/assets/24393098/21158603/b0cae644-c132-11e6-872f-a3fb8f63b586.jpg);/*your background image*/  
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;/*this sets the image to fullscreen covering the whole screen*/  
+   /*css hack for ie*/     
+   filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cloud.githubusercontent.com/assets/24393098/21158603/b0cae644-c132-11e6-872f-a3fb8f63b586.jpg',sizingMethod='scale');
+   -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cloud.githubusercontent.com/assets/24393098/21158603/b0cae644-c132-11e6-872f-a3fb8f63b586.jpg',sizingMethod='scale')";
 }
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
 }
     </style>	  
 	  
   </head>
   <body>
+	  <!--
 <div id="bg">
   <img src="https://cloud.githubusercontent.com/assets/24393098/21158603/b0cae644-c132-11e6-872f-a3fb8f63b586.jpg" alt="">
 </div>	
 	  
-<!--	  
+	  
 <img src="https://cloud.githubusercontent.com/assets/24393098/21158603/b0cae644-c132-11e6-872f-a3fb8f63b586.jpg" id="bg" alt="">
 	
     <h2>
