@@ -37,19 +37,21 @@
 	list-style-position: inside;      
       }  	
 	    
-a:hover {
-    position: relative;
+a {
+  position: relative;
+  display: inline-block;
 }
-a:hover:after {
-    content: url(https://cloud.githubusercontent.com/assets/24393098/21237870/95069a64-c2b5-11e6-8271-c58c162cd7cc.gif); /* no need for qoutes */
-    display: block;
-    position: absolute;
-    left: 0px; /* change this value to one that suits you */
-    top: 27hv; /* change this value to one that suits you */
-    height: 10px;
-    width: 10px;
 
-}	    
+a:hover:before {
+  content: '';
+  display: block;
+  background: rgba(255, 0, 0, .5); /* your background */
+  width: 20px; /* image width */
+  height: 100px; /* image height */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
     </style>	  
   </head>
   <body>
@@ -57,7 +59,9 @@ a:hover:after {
 	
     <h2>
      <nav> <ul>
-       <li><a href="/blog">My Blog</a></li>
+<!--       <li><a href="/blog">My Blog</a></li> -->
+<li><a href="/blog">My Blog><img src="https://cloud.githubusercontent.com/assets/24393098/21234467/99267230-c2a7-11e6-9c0c-9f903a2779ff.gif" /></a>
+	     </li>	     
        <li><a href="/stuff">My Stuff</a></li>
        <li><a href="/links">My Cool Links</a></li>
        <li><a href="/projects">My Projects</a></li>
