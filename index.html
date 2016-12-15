@@ -16,43 +16,40 @@
    	  -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cloud.githubusercontent.com/assets/24393098/21234756/d2926802-c2a8-11e6-82db-14cebb3d9691.jpg.jpg',sizingMethod='scale')"; */
 	}
 
-      li a {
-        color: White;
-        font-family: 'Mountains of Christmas', cursive;      
-	font-size: 6vmin;
-	font-weight: bold;
-	text-decoration: none; /*remove underline*/
-      }  
       ul {
          position: fixed; 
-         bottom: 10vmin; 
+         bottom: 10vmin; /*align 10% from bottom*/
          left: 0px; 
 	 list-style-position: inside;  
          list-style-image: url('https://cloud.githubusercontent.com/assets/24393098/21241996/0d1d0798-c2c7-11e6-8b9a-7b42cc6e5d19.gif');	      
       }  	
 	    
-ul > li {
-    opacity: 1.0;
-}
+      li a {
+        color: White;
+        font-family: 'Mountains of Christmas', cursive;      
+	font-size: 6vmin; /*6% of screen size = 65px (for height=1080) */
+	font-weight: bold;
+	text-decoration: none; /*remove underline*/
+      }  
 
-ul:hover > li:not(:hover) {
-    opacity: 0.5;
-}
+      ul > li {  /*normal opacity when no hover*/
+	opacity: 1.0;
+      }
+      ul:hover > li:not(:hover) {  /*all list entries, opacity = 50% when not hovered*/ 
+	opacity: 0.5;
+      }
+	    
     </style>	  
   </head>
   <body>
-<!--    <img alt="" src="https://cloud.githubusercontent.com/assets/24393098/21234467/99267230-c2a7-11e6-9c0c-9f903a2779ff.gif"> -->
 	
- <!--   <h2> -->
      <nav> <ul>
        <li><a href="/blog">My Blog</a></li> 
        <li><a href="/stuff">My Stuff</a></li>
        <li><a href="/links">My Cool Links</a></li>
        <li><a href="/projects">My Projects</a></li>
     </ul></nav>  
-<!--   </h2> -->
 
-	  
 	<footer class="site-footer">
 	</footer>
   </body>
