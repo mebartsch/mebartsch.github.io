@@ -37,20 +37,12 @@
 	list-style-position: inside;      
       }  	
 	    
-a {
-  position: relative;
-  display: inline-block;
+ul > li {
+    opacity: 1.0;
 }
 
-a:hover:before {
-  content: '';
-  display: block;
-  background: rgba(255, 0, 0, .5); /* your background */
-  width: 20px; /* image width */
-  height: 100px; /* image height */
-  position: absolute;
-  top: 0;
-  right: 0;
+ul:hover > li:not(:hover) {
+    opacity: 0.5;
 }
     </style>	  
   </head>
@@ -59,9 +51,7 @@ a:hover:before {
 	
     <h2>
      <nav> <ul>
-<!--       <li><a href="/blog">My Blog</a></li> -->
-<li><a href="/blog">My Blog><img src="https://cloud.githubusercontent.com/assets/24393098/21237870/95069a64-c2b5-11e6-8271-c58c162cd7cc.gif" /></a>
-	     </li>	     
+       <li><a href="/blog">My Blog</a></li> 
        <li><a href="/stuff">My Stuff</a></li>
        <li><a href="/links">My Cool Links</a></li>
        <li><a href="/projects">My Projects</a></li>
