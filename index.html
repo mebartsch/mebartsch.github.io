@@ -10,32 +10,31 @@
 	body{height:100%;
    	  width:100%;
    	  background-image:url('https://cloud.githubusercontent.com/assets/24393098/21240916/39a93246-c2c2-11e6-8a23-96534b4889d8.gif'), url('https://cloud.githubusercontent.com/assets/24393098/21234756/d2926802-c2a8-11e6-82db-14cebb3d9691.jpg');/*your background image*/  
-   	  background-repeat:no-repeat, no-repeat;/*we want to have one single image not a repeated one*/  
-   	  background-size:100%, cover;/*this sets the image to fullscreen covering the whole screen*/  
-   	  /*css hack for ie*/     
+   	  background-repeat:no-repeat, no-repeat;/*2 pictures, both no repear*/  
+   	  background-size:100%, cover;/*1st picture 100% width, 2nd cover page*/  
+   	  /*css hack for ie     
    	  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cloud.githubusercontent.com/assets/24393098/21234756/d2926802-c2a8-11e6-82db-14cebb3d9691.jpg',sizingMethod='scale');
-   	  -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cloud.githubusercontent.com/assets/24393098/21234756/d2926802-c2a8-11e6-82db-14cebb3d9691.jpg.jpg',sizingMethod='scale')";
+   	  -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cloud.githubusercontent.com/assets/24393098/21234756/d2926802-c2a8-11e6-82db-14cebb3d9691.jpg.jpg',sizingMethod='scale')"; */
 	}
-      h2 { 
-         position: fixed; 
+      nav { 
+  /*       position: fixed; 
          bottom: 10vmin; 
-         left: 0px; 
- /*       width: 100%; */
-      }
+         left: 0px;  */
+      } 
       li a {
         color: White;
         font-family: 'Mountains of Christmas', cursive;      
 	font-size: 6vmin;
-	font-weight: 500;
+	font-weight: bold;
 	text-decoration: none; /*remove underline*/
 /*	list-style: none;      no bullets*/
       }  
       ul {
-        color: White;
-	font-size: 6vmin;
-	font-weight: 500;
-	list-style-position: inside;  
-        list-style-image: url('https://cloud.githubusercontent.com/assets/24393098/21241996/0d1d0798-c2c7-11e6-8b9a-7b42cc6e5d19.gif');	      
+         position: fixed; 
+         bottom: 10vmin; 
+         left: 0px; 
+	 list-style-position: inside;  
+         list-style-image: url('https://cloud.githubusercontent.com/assets/24393098/21241996/0d1d0798-c2c7-11e6-8b9a-7b42cc6e5d19.gif');	      
       }  	
 	    
 ul > li {
@@ -50,14 +49,14 @@ ul:hover > li:not(:hover) {
   <body>
 <!--    <img alt="" src="https://cloud.githubusercontent.com/assets/24393098/21234467/99267230-c2a7-11e6-9c0c-9f903a2779ff.gif"> -->
 	
-    <h2>
+ <!--   <h2> -->
      <nav> <ul>
        <li><a href="/blog">My Blog</a></li> 
        <li><a href="/stuff">My Stuff</a></li>
        <li><a href="/links">My Cool Links</a></li>
        <li><a href="/projects">My Projects</a></li>
     </ul></nav>  
-   </h2>
+<!--   </h2> -->
 
 	  
 	<footer class="site-footer">
