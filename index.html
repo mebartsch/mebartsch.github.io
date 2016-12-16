@@ -24,8 +24,6 @@
 /*	 list-style-position: inside;  
          list-style-image: url('https://cloud.githubusercontent.com/assets/24393098/21241996/0d1d0798-c2c7-11e6-8b9a-7b42cc6e5d19.gif');	      
 */
-	 line-height: 10vmin;
-
 	 }  	
 	    
       li a {
@@ -34,20 +32,21 @@
 	font-size: 6vmin; /*6% of screen size = 65px (for height=1080) */
 	font-weight: bold;
 	text-decoration: none; /*remove underline*/
-	padding-right: 100px; padding-left: 100px;/*make room for bullet*/
+	padding-right: 100px; padding-left: 100px; /*make room for bullet*/
       }  
 
       ul > li {  /*normal opacity when no hover*/
 	opacity: 1.0;
-      }
+      } 
       ul:hover > li:not(:hover) {  /*all list entries, opacity = 50% when not hovered*/ 
 	opacity: 0.5;
       }
-     li:hover {   
+      li:hover {   /*enable bullet when hover */
         background: url(https://cloud.githubusercontent.com/assets/24393098/21272226/36b6a328-c373-11e6-8132-808b952baed8.gif); /*wand*/
         background-repeat: no-repeat;
 	background-position: 0px;
-	     
+	background-size: 10vmin 10vmin;
+
      }  	    
     </style>	  
   </head>
