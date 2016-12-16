@@ -20,9 +20,12 @@
          position: fixed; 
          bottom: 10vmin; /*align 10% from bottom*/
          left: 0px; 
-	 list-style-position: inside;  
+         list-style: none;
+         text-align: right;	      
+/*	 list-style-position: inside;  
          list-style-image: url('https://cloud.githubusercontent.com/assets/24393098/21241996/0d1d0798-c2c7-11e6-8b9a-7b42cc6e5d19.gif');	      
-      }  	
+*/
+	 }  	
 	    
       li a {
         color: White;
@@ -30,7 +33,7 @@
 	font-size: 6vmin; /*6% of screen size = 65px (for height=1080) */
 	font-weight: bold;
 	text-decoration: none; /*remove underline*/
-	padding-right: 20px; /*?prevents line feed when item clicked ? */
+	padding-right: 10rem; /*?prevents line feed when item clicked ? */
       }  
 
       ul > li {  /*normal opacity when no hover*/
@@ -39,7 +42,11 @@
       ul:hover > li:not(:hover) {  /*all list entries, opacity = 50% when not hovered*/ 
 	opacity: 0.5;
       }
-	    
+     li:hover {   
+        background: url(https://upload.wikimedia.org/wikipedia/commons/1/12/Userboxnurkowanie.png);
+        background-repeat: no-repeat;
+	background-position: 150px;
+     }  	    
     </style>	  
   </head>
   <body>
