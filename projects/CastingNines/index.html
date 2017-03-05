@@ -61,8 +61,15 @@ td{
 var currentTextInput;
 var puzzelArrayData;
 var hintsLeft = 5;
+	
+function pausecomp(ms) {
+ms += new Date().getTime();
+while (new Date() < ms){}
+} 
+	
 //Loads the Crossword
 function runExample(){
+	pausecomp(5000);
 }
 	
 function initializeScreen(){
@@ -195,16 +202,17 @@ function solveClicked(){
 
 	
 </script>
-	<div id="hideaway" style="display:none;">Here's the hidden content</div>
-	<a href="javascript:;" onClick="document.getElementById('hideaway').style.display='block';">Reveal hidden content</a>
-	<a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';">Hide content again</a>
+
 	
 	<h1> Casting Out Nines </h1> 
 		
 </head>
 	
 <body onload="runExample()">  
-	  
+	
+	<div id="hideaway" style="display:none;">Here's the hidden content</div>
+	<a href="javascript:;" onClick="document.getElementById('hideaway').style.display='block';">Reveal hidden content</a>
+	<a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';">Hide content again</a>
 <!--	<p>Enter a word to check the value</p> 
 	  
 	 <form action="#">   <!-- form for entering data with event handler -- >
