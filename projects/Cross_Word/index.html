@@ -194,14 +194,19 @@ function solveClicked(){
 </head>
 <body onload="initializeScreen()">
 <div id="leftBox">
-// <table id="puzzel">
-	
-<table width=100%>
-  <tr>
-    <td><table id="puzzel">
-    </td>
-    <td>
-	    <table id="hintsTable">
+<table id="puzzel">
+
+</table>
+</div>
+<div id="rightBox">
+<table>
+	<tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
+	<td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
+	<td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
+	<td><input class="butt"  type="submit" value="Hint" onclick="clueClicked()"></td></tr>
+</table>
+</div>
+ <table id="hintsTable">
 		<tr>
 			<td><strong>Across:</strong></td><td><strong>Down:</strong></td>
 		</tr>
@@ -219,42 +224,7 @@ function solveClicked(){
 		</tr>
 		<tr>
 			<td>10. Minecraft clock ingredient</td><td>5. Pachyderms</td>			
-</table>
-
-    </td>
-  </tr>
-</table>
-	
-// </table>
-</div>
-	
-<div id="rightBox">
-<table>
-	<tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
-	<td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
-	<td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
-	<td><input class="butt"  type="submit" value="Hint" onclick="clueClicked()"></td></tr>
-</table>
-</div>
-// <table id="hintsTable">
-//		<tr>
-//			<td><strong>Across:</strong></td><td><strong>Down:</strong></td>
-//		</tr>
-//		<tr>
-//			<td>6. Stringed Instruments</td><td>1. They're not muggles</td>
-//		</tr>
-//		<tr>
-//			<td>7. Containers for mail</td><td>2. Aquatic Athlete</td>
-//		</tr>
-//		<tr>
-//			<td>8. Same letters and root of 9 across</td><td>3. Halloween gourd</td>
-//		</tr>
-//		<tr>
-//			<td>9. Laser or inkjet</td><td>4. Roy C Sullivan was hit by this 7 times</td>
-//		</tr>
-//		<tr>
-//			<td>10. Minecraft clock ingredient</td><td>5. Pachyderms</td>			
-// </table>
+ </table>
 
 </body>
 </html>
