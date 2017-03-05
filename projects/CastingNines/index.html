@@ -62,6 +62,9 @@ var currentTextInput;
 var puzzelArrayData;
 var hintsLeft = 5;
 //Loads the Crossword
+function runExample(){
+}
+	
 function initializeScreen(){
 	var puzzelTable = document.getElementById("puzzel");
 	puzzelArrayData = preparePuzzelArray();
@@ -194,20 +197,20 @@ function solveClicked(){
 		
 </head>
 	
-<body>	  
+<body onload="runExample()">  
 	  
-	<p>Enter a word to check the value</p> 
+<!--	<p>Enter a word to check the value</p> 
 	  
-	 <form action="#">   <!-- form for entering data with event handler -->
+	 <form action="#">   <!-- form for entering data with event handler -- >
 	  <input type="text" name="txt" onkeypress="handle(event)" />
 	</form> 
 
 	<br>
 
-	 <form id="form1" >     <!-- TextArea Form for Data output -->
+	 <form id="form1" >     <!-- TextArea Form for Data output -- >
 	  <textarea name="Text1" style="font-size: 14pt"></textarea> 
     	 </form> 
-	
+-->	
 <!--
 </head>
 	
