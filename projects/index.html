@@ -24,6 +24,13 @@
            position: fixed; 
            bottom: 10vmin; /*align 10% from bottom*/
 	 }  	
+	#list {
+  	  position: relative;
+	}
+	#list-content {
+  	  position: absolute;
+  	  bottom: 0;
+	}
 
 	  </style>
   </head>
@@ -42,8 +49,7 @@
     	</section>
 
 	<!-- MAIN BODY -->
-    	<section class="main-content">
-		<br><br><br><br><br><br><br><br><br>
+    	<section id="list-content">
 		<nav class="whitefont">
 		   <ul> 
 			<li><a href="/projects/Dollar-Word" target="_blank">Dollar Word Calculator</a></li>
