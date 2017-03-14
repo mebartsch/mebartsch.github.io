@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-us">
  <head>
@@ -10,45 +9,111 @@
   function function1() {
     var x = document.getElementById("id1-1");
     var y = document.getElementById("id1-2");
-   if (x.value == 1) {
-    x.style.background = "white";
-    y.style.background = "yellow";
+    var z = document.getElementById("out");
+
+   if (x.value == 11) {
+      x.style.background = "white";
+      y.style.background = "yellow";
+      z.value = "Add the digits for the number you just entered";
+      y.focus();
+    } else {
+      x.style.background = "red"; 
+      z.value = "Try again";
     }}
+
   function function2() {
     var x = document.getElementById("id1-2");
     var y = document.getElementById("id2-1");
-   if (x.value == 1) {
-    x.style.background = "white";
-    y.style.background = "yellow";
+    var z = document.getElementById("out");
+
+   if (x.value == 2) {
+      x.style.background = "white";
+      y.style.background = "yellow";
+      z.value = "Add the digits of the second number";
+      y.focus();
+    } else {
+      x.style.background = "red"; 
+      z.value = "Try Again";
     }}
+
   function function3() {
     var x = document.getElementById("id2-1");
-    var y = document.getElementById("id2-2");
-   if (x.value == 4) {
-    x.style.background = "white";
-    y.style.background = "yellow";
-    }} 
-  function function4() {
-    var x = document.getElementById("id2-2");
     var y = document.getElementById("id3-1");
+    var z = document.getElementById("out");
+   if (x.value == 5) {
+    x.style.background = "white";
+    y.style.background = "yellow";
+  //  z.value = "Since that number is a single digit, we can just copy it to the next column"
+    document.getElementById("id2-2").value = document.getElementById("id2-1").value;
+    z.value = "Add the digits of the third line";
+    y.focus();
+    } else {
+      x.style.background = "red"; 
+      z.value = "Remember to caste out the nines";
+    }} 
+
+  function function4() {
+    var x = document.getElementById("id3-1");
+    var y = document.getElementById("id2-3");
+    var z = document.getElementById("out");
+
+   if (x.value == 6) {
+    x.style.background = "white";
+    y.style.background = "yellow";
+    document.getElementById("id3-2").value = document.getElementById("id3-1").value;
+    z.value = "Add the digits of all 3 lines";
+    y.focus();
+
+    } else {
+      x.style.background = "red"; 
+      z.value = "Try Again";
+    }} 
+
+  function function5() {
+    var x = document.getElementById("id2-3");
+    var y = document.getElementById("id2-4");
+    var z = document.getElementById("out");
+
+   if (x.value == 13) {
+    x.style.background = "white";
+    y.style.background = "yellow";
+    z.value = "Add the digits for the number you just entered";
+    y.focus();
+    } else {
+      x.style.background = "red"; 
+      z.value = "Try Again";
+    }} 
+	
+  function function6() {
+    var x = document.getElementById("id2-4");
+    var y = document.getElementById("id4-1");
+    var z = document.getElementById("out");
+
    if (x.value == 4) {
     x.style.background = "white";
     y.style.background = "yellow";
-    }}  
-  function function5() {
-    var x = document.getElementById("id3-1");
-    var y = document.getElementById("id3-2");
-   if (x.value == 0) {
+    z.value = "Add the digits for your answer";
+    y.focus();
+    } else {
+      x.style.background = "red"; 
+      z.value = "Try Again";
+    }} 
+  function function7() {
+    var x = document.getElementById("id4-1");
+    var y = document.getElementById("id4-2");
+    var z = document.getElementById("out");
+
+   if (x.value == 4) {
     x.style.background = "white";
     y.style.background = "yellow";
-    }}	
-  function function6() {
-    var x = document.getElementById("id3-2");
-    var y = document.getElementById("id2-3");
-   if (x.value == 0) {
-    x.style.background = "white";
-    y.style.background = "yellow";
-    }}	  
+    document.getElementById("id4-2").value = document.getElementById("id4-1").value;
+    document.getElementById("id2-4").style.background = "yellow";
+    z.value = "Do your numbers match?";
+    y.focus();
+    } else {
+      x.style.background = "red"; 
+      z.value = "Try Again";
+    }} 
 	 </script>	 
 </head>
 <style>
@@ -60,7 +125,7 @@ input {
 }
 label {
   display: inline-block;
-  width: 40vw;
+  width: 20vw;
   text-align: right;
   font-size:7vw;
 }​
@@ -73,32 +138,38 @@ label {
   <div>
 
    <div style="margin-top:10em">                     <!-- line 1 -->
-    <label for="id1">1</label>
+    <label for="id1">1343</label>
     <input style="width:1.8em;background:yellow" type="text" id="id1-1" onkeyup="function1()"/>
     <input style="width:1.2em" type="text" id="id1-2" onkeyup="function2()"/>
    </div>
 
    <div style="margin-top:0.8em">                     <!-- line 2 -->
-    <label for="id1">22</label>
+    <label for="id1">932</label>
     <input style="width:1.8em" type="text" id="id2-1" onkeyup="function3()"/>
-    <input style="width:1.2em" type="text" id="id2-2" onkeyup="function4()"/>
-    <input style="width:1.2em" type="text" id="id2-3"/>
+    <input style="width:1.2em" type="text" id="id2-2" />
+    <input style="width:1.8em" type="text" id="id2-3" onkeyup="function5()"/>
+    <input style="width:1.2em" type="text" id="id2-4" onkeyup="function6()"/>
+	   
 
    </div>
 
    <div style="margin-top:0.8em">                     <!-- line 3 -->
-    <label for="id1"><u> + 333 </u> </label>
-    <input style="width:1.8em" type="text" id="id3-1" onkeyup="function5()"/>
-    <input style="width:1.2em" type="text" id="id3-2" onkeyup="function6()"/>
+    <label for="id1"><u> + 1536 </u> </label>
+    <input style="width:1.8em" type="text" id="id3-1" onkeyup="function4()"/>
+    <input style="width:1.2em" type="text" id="id3-2" />
   </div>
 
   <div style="margin-top:2em">                    <!-- line 4 (answer) -->
-    <label for="id1">356</label>
-    <input style="width:1.8em" type="text" id="id4-1"/>
+    <label for="id1">3811</label>
+    <input style="width:1.8em" type="text" id="id4-1" onkeyup="function7()"/>
     <input style="width:1.2em" type="text" id="id4-2"/>
 
   </div>
+  <div style="margin-top:2em">                    <!-- directions -->
+  <!--  <label style="font-size:20px;text-align:right" for="id1">directions</label> -->
+    <input style="font-size:50px;width:100%;text-align:left;background:yellow" type="text" value="1. Add the digits of the first number" id="out"/>
 
+  </div>
 </div>
 
 
