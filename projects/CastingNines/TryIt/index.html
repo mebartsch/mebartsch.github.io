@@ -7,35 +7,40 @@
 	 
 <script>
   function nextStep() {  
-   //arguments: 1.current cell, 2.next cell, 3.expected value, 4.next message
-   var x = document.getElementById(arguments[0]);
-   var y = document.getElementById(arguments[1]);
-   var z = document.getElementById("message");
+   //arguments: 0.current-cell id, 1.next-cell id, 2.expected value, 3.next message
+   var nowbox = document.getElementById(arguments[0]);
+   var nextbox = document.getElementById(arguments[1]);
+   var expected = arguments[2];
+   var nextmsg = arguments[3];
+   var msgbox = document.getElementById("message");
 
-   if (x.value == arguments[2]) {
-    x.style.background = "white";
-    y.style.background = "yellow";
-    y.focus();
-    z.value = arguments[3];
+   if (nowbox.value == expected) {
+    nowbox.style.background = "white";
+    nextbox.style.background = "yellow";
+    nextbox.focus();
+    msgbox.value = nextmsg;
+    //spans that require red/black transition have class name = current-cell id
     var cols = document.getElementsByClassName(arguments[0]);
      for(i=0; i<cols.length; i++) {
       cols[i].style.color = 'black';
      }
    } 
-   else if(x.value == arguments[2]+9) {
-    x.style.background = "red"; 
-    z.value = "Remember to cast out the nines";
+   else if(nowbox.value == expected+9) {
+    nowbox.style.background = "red"; 
+    msgbox.value = "Remember to cast out the nines";
+    //spans that require red/black transition have class name = current-cell id
     var cols = document.getElementsByClassName(arguments[0]);
      for(i=0; i<cols.length; i++) {
       cols[i].style.color = 'red';
      }
    }  
    else{
-    x.style.background = "red"; 
-    z.value = "Try Again";
+    nowbox.style.background = "red"; 
+    msgbox.value = "Try Again";
    }}
 
    function setYellow() {
+    //arguments: 0.cell id to turn yellow
     document.getElementById(arguments[0]).style.background = "yellow";
    }
 
