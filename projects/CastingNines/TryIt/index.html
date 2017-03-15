@@ -6,160 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	 
 <script>
-  function function1() {
-    var x = document.getElementById("id1-1");
-    var y = document.getElementById("id1-2");
-    var z = document.getElementById("out");
-
-   if (x.value == 11) {
-      x.style.background = "white";
-      y.style.background = "yellow";
-      z.value = "Add the digits for the number you just entered";
-      y.focus();
-    } else {
-      x.style.background = "red"; 
-      z.value = "Try again";
-    }}
-
-  function function2() {
-    var x = document.getElementById("id1-2");
-    var y = document.getElementById("id2-1");
-    var z = document.getElementById("out");
-
-   if (x.value == 2) {
-      x.style.background = "white";
-      y.style.background = "yellow";
-      z.value = "Add the digits of the second number";
-      y.focus();
-    } else {
-      x.style.background = "red"; 
-      z.value = "Try Again";
-    }}
-
-  function function3() {
-    var x = document.getElementById("id2-1");
-    var y = document.getElementById("id3-1");
-    var z = document.getElementById("out");
-   if (x.value == 5) {
-    x.style.background = "white";
-    y.style.background = "yellow";
-  //  z.value = "Since that number is a single digit, we can just copy it to the next column"
-    document.getElementById("id2-2").value = document.getElementById("id2-1").value;
-    z.value = "Add the digits of the third line";
-    y.focus();
-    } else {
-      x.style.background = "red"; 
-      z.value = "Remember to caste out the nines";
-    }} 
-
-  function function4() {
-    var x = document.getElementById("id3-1");
-    var y = document.getElementById("id2-3");
-    var z = document.getElementById("out");
-
-   if (x.value == 6) {
-    x.style.background = "white";
-    y.style.background = "yellow";
-    document.getElementById("id3-2").value = document.getElementById("id3-1").value;
-    z.value = "Add the digits of all 3 lines";
-    y.focus();
-
-    } else {
-      x.style.background = "red"; 
-      z.value = "Try Again";
-    }} 
-
-  function function5() {
-    var x = document.getElementById("id2-3");
-    var y = document.getElementById("id2-4");
-    var z = document.getElementById("out");
-
-   if (x.value == 13) {
-    x.style.background = "white";
-    y.style.background = "yellow";
-    z.value = "Add the digits for the number you just entered";
-    y.focus();
-    } else {
-      x.style.background = "red"; 
-      z.value = "Try Again";
-    }} 
-	
-  function function6() {
-    var x = document.getElementById("id2-4");
-    var y = document.getElementById("id4-1");
-    var z = document.getElementById("out");
-
-   if (x.value == 4) {
-    x.style.background = "white";
-    y.style.background = "yellow";
-    z.value = "Add the digits for your answer";
-    y.focus();
-    } else {
-      x.style.background = "red"; 
-      z.value = "Try Again";
-    }} 
-  function function7() {
-    var x = document.getElementById("id4-1");
-    var y = document.getElementById("id4-2");
-    var z = document.getElementById("out");
-
-   if (x.value == 4) {
-    x.style.background = "white";
-    y.style.background = "yellow";
-    document.getElementById("id4-2").value = document.getElementById("id4-1").value;
-    document.getElementById("id2-4").style.background = "yellow";
-    z.value = "Do your numbers match?";
-    y.focus();
-    } else{
-      x.style.background = "red"; 
-      z.value = "Remember to caste out the nines";
-    }}
-
-//  function All() {
-//    document.getElementById("id1-2").style.background = "yellow";
-//   }
-
-  function All() {
-    var x = document.getElementById(arguments[0]);
-    var y = document.getElementById(arguments[1]);
-    var z = document.getElementById("out");
+  function nextStep() {  
+   //arguments: 1.current cell, 2.next cell, 3.expected value, 4.next message
+   var x = document.getElementById(arguments[0]);
+   var y = document.getElementById(arguments[1]);
+   var z = document.getElementById("message");
 
    if (x.value == arguments[2]) {
     x.style.background = "white";
     y.style.background = "yellow";
     y.focus();
     z.value = arguments[3];
-    } 
+    var cols = document.getElementsByClassName(arguments[0]);
+     for(i=0; i<cols.length; i++) {
+      cols[i].style.color = 'black';
+     }
+   } 
    else if(x.value == arguments[2]+9) {
-     x.style.background = "red"; 
-     z.value = "Remember to caste out the nines";
-     }  
+    x.style.background = "red"; 
+    z.value = "Remember to cast out the nines";
+    var cols = document.getElementsByClassName(arguments[0]);
+     for(i=0; i<cols.length; i++) {
+      cols[i].style.color = 'red';
+     }
+   }  
    else{
-     x.style.background = "red"; 
-     z.value = "Try Again";
+    x.style.background = "red"; 
+    z.value = "Try Again";
    }}
 
-function setYellow() {
-  document.getElementById(arguments[0]).style.background = "yellow";
-}
+   function setYellow() {
+    document.getElementById(arguments[0]).style.background = "yellow";
+   }
 
-	 </script>	 
+</script>
+	 
 </head>
 <style>
 
-input {
+ input {
   margin-left:5vw;
   text-align:center;
   font-size:7vw;
-}
-label {
+ }
+ label {
   display: inline-block;
   width: 20vw;
   text-align: right;
   font-size:7vw;
-}​
+ }
+ .messageBox {
+  font-size:3vw;
+  width:90%;
+  text-align:center;
+  background:yellow;
+ }
 
-
+}
+	
 </style>
 
 <body style="background-color:cyan">
@@ -168,40 +72,34 @@ label {
 
    <div style="margin-top:10em">                     <!-- line 1 -->
     <label for="id1">1343</label>
-    <input style="width:1.8em;background:yellow" type="text" id="id1-1" autofocus onkeyup="All('id1-1','id1-2',11,'Add the digits of the number you just entered')"/>
-    <input style="width:1.2em" type="text" id="id1-2" onkeyup="All('id1-2','id2-1',2,'Add the digits of the second number')"/>
+    <input style="width:1.8em;background:yellow" type="text" id="id1-1" autofocus onkeyup="nextStep('id1-1','id1-2',11,'Add the digits of the number you just entered')"/>
+    <input style="width:1.2em" type="text" id="id1-2" onkeyup="nextStep('id1-2','id2-1',2,'Add the digits of the second number')"/>
    </div>
 
    <div style="margin-top:0.8em">                     <!-- line 2 -->
-    <label for="id1">932</label>
-    <input style="width:1.8em" type="text" id="id2-1" onkeyup="All('id2-1','id2-2',5,'Add the digits of the number you just entered')"/>
-    <input style="width:1.2em" type="text" id="id2-2" onkeyup="All('id2-2','id3-1',5,'Add the digits of the third number')"/>
-    <input style="width:1.8em" type="text" id="id2-3" onkeyup="All('id2-3','id2-4',13,'Add the digits of the number you just entered')"/>
-    <input style="width:1.2em" type="text" id="id2-4" onkeyup="All('id2-4','id4-1',4,'Add the digits for your answer')"/>
-	   
-
+    <label for="id1"><span class="id2-1">9</span>32</label>
+    <input style="width:1.8em" type="text" id="id2-1" onkeyup="nextStep('id2-1','id2-2',5,'Add the digits of the number you just entered')"/>
+    <input style="width:1.2em" type="text" id="id2-2" onkeyup="nextStep('id2-2','id3-1',5,'Add the digits of the third number')"/>
+    <input style="width:1.8em" type="text" id="id2-3" onkeyup="nextStep('id2-3','id2-4',13,'Add the digits of the number you just entered')"/>
+    <input style="width:1.2em" type="text" id="id2-4" onkeyup="nextStep('id2-4','id4-1',4,'Add the digits for your answer')"/>
+   </div>
+	  
+   <div style="margin-top:0.8em">                     <!-- line 3 -->
+    <label for="id1"><u> + 15<span class="id3-1">36</span> </u> </label>
+    <input style="width:1.8em" type="text" id="id3-1" onkeyup="nextStep('id3-1','id3-2',6,'Add the digits of the number you just entered')"/>
+    <input style="width:1.2em" type="text" id="id3-2" onkeyup="nextStep('id3-2','id2-3',6,'Add the digits of all 3 lines')"/>
    </div>
 
-   <div style="margin-top:0.8em">                     <!-- line 3 -->
-    <label for="id1"><u> + 1536 </u> </label>
-    <input style="width:1.8em" type="text" id="id3-1" onkeyup="All('id3-1','id3-2',6,'Add the digits of the number you just entered')"/>
-    <input style="width:1.2em" type="text" id="id3-2" onkeyup="All('id3-2','id2-3',6,'Add the digits of all 3 lines')"/>
-  </div>
-
-  <div style="margin-top:2em">                    <!-- line 4 (answer) -->
-    <label for="id1">3811</label>
-    <input style="width:1.8em" type="text" id="id4-1" onkeyup="All('id4-1','id4-2',4,'Add the digits of the number you just entered')"/>
-    <input style="width:1.2em" type="text" id="id4-2" onkeyup="All('id4-2','id2-4',4,'Do the values match?'),setYellow('id4-2')"/>
-
-  </div>
-  <div style="margin-top:2em">                    <!-- directions -->
-  <!--  <label style="font-size:20px;text-align:right" for="id1">directions</label> -->
-    <input style="font-size:50px;width:100%;text-align:left;background:yellow" type="text" value="1. Add the digits of the first number" id="out"/>
-
-  </div>
+   <div style="margin-top:2em">                    <!-- line 4 (answer) -->
+    <label for="id1">3<span class="id4-1">81</span>1</label>
+    <input style="width:1.8em" type="text" id="id4-1" onkeyup="nextStep('id4-1','id4-2',4,'Add the digits of the number you just entered')"/>
+    <input style="width:1.2em" type="text" id="id4-2" onkeyup="nextStep('id4-2','id2-4',4,'Do the values match?'),setYellow('id4-2')"/>
+   </div>
+	  
+   <div style="margin-top:2em">                    <!-- message box -->
+    <input class="messageBox" type="text" value="Add the digits of the first number" id="message"/>
+   </div>
 </div>
-
-
 
         <footer class="site-footer">
 	</footer>
