@@ -46,7 +46,9 @@
 </script>
 	 
 </head>
+
 <style>
+
  input {
   margin-left:5vw;
   text-align:center;
@@ -64,13 +66,15 @@
   text-align:center;
   background:yellow;
  }
-
+.smallbox{width:1.2em}
+.largebox{width:1.8em}	
 #img1{
   width:25vw;
   vertical-align:top; 
   visibility:hidden;
 }
-	
+
+
 </style>
 
 <body style="background-color:cyan">
@@ -79,35 +83,35 @@
 
    <div style="margin-top:5em">                     <!-- line 1 -->
     <label for="box1-1">1343</label>
-    <input style="width:1.8em" type="text" id="box1-1" onkeyup="setTimeout(function() { nextStep('box1-1','box1-2',11,'Add the digits of the number you just entered'); }, 200);"/>
-    <input style="width:1.2em" type="text" id="box1-2" onkeyup="setTimeout(function() { nextStep('box1-2','box2-1',2,'Add the digits of the second number'); }, 200);"/>
+    <input class="largebox" type="text" id="box1-1" onkeyup="setTimeout(function() { nextStep('box1-1','box1-2',11,'Add the digits of the number you just entered'); }, 200);"/>
+    <input class="smallbox" type="text" id="box1-2" onkeyup="setTimeout(function() { nextStep('box1-2','box2-1',2,'Add the digits of the second number'); }, 200);"/>
    </div>
 
    <div style="margin-top:0.8em">                     <!-- line 2 -->
     <label for="box2-1"><span class="box2-1">9</span>32</label>
-    <input style="width:1.8em" type="text" id="box2-1" onkeyup="setTimeout(function() { nextStep('box2-1','box2-2',5,'Add the digits of the number you just entered'); }, 200);"/>
-    <input style="width:1.2em" type="text" id="box2-2" onkeyup="setTimeout(function() { nextStep('box2-2','box3-1',5,'Add the digits of the third number'); }, 200);"/>
-    <input style="width:1.8em" type="text" id="box2-3" onkeyup="setTimeout(function() { nextStep('box2-3','box2-4',13,'Add the digits of the number you just entered'); }, 200);"/>
-    <input style="width:1.2em" type="text" id="box2-4" onkeyup="setTimeout(function() { nextStep('box2-4','box4-1',4,'Add the digits for your answer'); }, 200);"/>
+    <input class="largebox" type="text" id="box2-1" onkeyup="setTimeout(function() { nextStep('box2-1','box2-2',5,'Add the digits of the number you just entered'); }, 200);"/>
+    <input class="smallbox type="text" id="box2-2" onkeyup="setTimeout(function() { nextStep('box2-2','box3-1',5,'Add the digits of the third number'); }, 200);"/>
+    <input class="largebox" type="text" id="box2-3" onkeyup="setTimeout(function() { nextStep('box2-3','box2-4',13,'Add the digits of the number you just entered'); }, 200);"/>
+    <input class="smallbox" type="text" id="box2-4" onkeyup="setTimeout(function() { nextStep('box2-4','box4-1',4,'Add the digits for your answer'); }, 200);"/>
    </div>
 
- <div>	
+
   <div style="display:inline-block">  
    <div style="margin-top:0.8em">                     <!-- line 3 -->
     <label for="box3-1"><u> + 15<span class="box3-1">36</span> </u> </label>
-    <input style="width:1.8em" type="text" id="box3-1" onkeyup="setTimeout(function() { nextStep('box3-1','box3-2',6,'Add the digits of the number you just entered'); }, 200);"/>
-    <input style="width:1.2em" type="text" id="box3-2" onkeyup="setTimeout(function() { nextStep('box3-2','box2-3',6,'Add the digits of all 3 lines'); }, 200);"/>
+    <input class="largebox" type="text" id="box3-1" onkeyup="setTimeout(function() { nextStep('box3-1','box3-2',6,'Add the digits of the number you just entered'); }, 200);"/>
+    <input class="smallbox type="text" id="box3-2" onkeyup="setTimeout(function() { nextStep('box3-2','box2-3',6,'Add the digits of all 3 lines'); }, 200);"/>
    </div>
 
    <div style="margin-top:2em">                    <!-- line 4 (answer) -->
     <input style="width:2.45em;background:yellow" type="text" id="mySum" onkeyup="setTimeout(function() { nextStep('mySum','box1-1',3811,'Add the digits for the first number'); }, 2000);"  />
-    <input style="width:1.8em" type="text" id="box4-1" onkeyup="setTimeout(function() { nextStep('box4-1','box4-2',4,'Add the digits of the number you just entered'); }, 200);"/>
-    <input style="width:1.2em" type="text" id="box4-2" onkeyup="setTimeout(function() { nextStep('box4-2','box2-4',4,'Do the values match?'),EndFunction(); }, 200)";/>
+    <input class="largebox" type="text" id="box4-1" onkeyup="setTimeout(function() { nextStep('box4-1','box4-2',4,'Add the digits of the number you just entered'); }, 200);"/>
+    <input class="smallbox type="text" id="box4-2" onkeyup="setTimeout(function() { nextStep('box4-2','box2-4',4,'Do the values match?'),EndFunction(); }, 200)";/>
    </div>
 
  </div>	
  <img id="img1" src="https://cloud.githubusercontent.com/assets/24393098/23970522/4a2f4c84-0987-11e7-9bcc-1ae3f8dba1d7.gif" alt="Arrow">
-</div>
+
 
    <div style="margin-top:2em">                    <!-- message box -->
     <input class="messageBox" type="text" value="Enter the sum of the 3 numbers" id="message"/>
