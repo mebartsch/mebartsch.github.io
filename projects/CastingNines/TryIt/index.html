@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	 
 <script>
-
   function nextStep() {  
    //arguments: 0.current-cell id, 1.next-cell id, 2.expected value, 3.next message
    var nowbox = document.getElementById(arguments[0]);
@@ -39,7 +38,6 @@
     nowbox.style.background = "red"; 
     msgbox.value = "Try Again";
    }}
-
    function EndFunction() {
     document.getElementById('box4-2').style.background = "yellow";
     document.getElementById("img1").style.visibility = "visible"
@@ -49,7 +47,6 @@
 </head>
 
 <style>
-
  input {
   margin-left:5vw;
   text-align:center;
@@ -61,20 +58,23 @@
   text-align: right;
   font-size:5vw;
  }
- .messageBox {
+.smallbox{width:1.2em}
+.largebox{width:1.8em}	
+ #messageBox {
   font-size:2.5vw;
-  width:90%;
+  width:70%;
   text-align:center;
   background:yellow;
  }
-.smallbox{width:1.2em}
-.largebox{width:1.8em}	
+ #answerBox {
+  width:2.55em;
+  background:yellow;
+ }
 #img1{
   width:22vw;
   vertical-align:top; 
   visibility:hidden;
 }
-
 </style>
 
 <body style="background-color:cyan">
@@ -94,8 +94,6 @@
     <input class="largebox" type="text" id="box2-3" onkeyup="setTimeout(function() { nextStep('box2-3','box2-4',13,'Add the digits of the number you just entered'); }, 200);"/>
     <input class="smallbox" type="text" id="box2-4" onkeyup="setTimeout(function() { nextStep('box2-4','box4-1',4,'Add the digits for your answer'); }, 200);"/>
    </div>
-
-
   <div style="display:inline-block">  
    <div style="margin-top:0.8em">                     <!-- line 3 -->
     <label for="box3-1"><u> + 15<span class="box3-1">36</span> </u> </label>
@@ -104,20 +102,16 @@
    </div>
 
    <div style="margin-top:2em">                    <!-- line 4 (answer) -->
-    <input style="width:2.45em;background:yellow" type="text" id="mySum" onkeyup="setTimeout(function() { nextStep('mySum','box1-1',3811,'Add the digits for the first number'); }, 2000);"  />
+    <input id="answerBox" type="text" id="mySum" onkeyup="setTimeout(function() { nextStep('mySum','box1-1',3811,'Add the digits for the first number'); }, 2000);"  />
     <input class="largebox" type="text" id="box4-1" onkeyup="setTimeout(function() { nextStep('box4-1','box4-2',4,'Add the digits of the number you just entered'); }, 200);"/>
     <input class="smallbox type="text" id="box4-2" onkeyup="setTimeout(function() { nextStep('box4-2','box2-4',4,'Do the values match?'),EndFunction(); }, 200)";/>
    </div>
-
  </div>	
  <img id="img1" src="https://cloud.githubusercontent.com/assets/24393098/23970522/4a2f4c84-0987-11e7-9bcc-1ae3f8dba1d7.gif" alt="Arrow">
-
-
    <div style="margin-top:2em">                    <!-- message box -->
-    <input class="messageBox" type="text" value="Enter the sum of the 3 numbers" id="message"/>
+    <input id="messageBox" type="text" value="Enter the sum of the 3 numbers" id="message"/>
    </div>
 </form>
-
         <footer class="site-footer">
 	</footer>
 	  
