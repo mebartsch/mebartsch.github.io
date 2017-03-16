@@ -39,7 +39,7 @@
     msgbox.value = "Try Again";
    }}
 	
-   function EndFunction() {
+   function endFunction() {
     document.getElementById('box4-2').style.background = "yellow";
     document.getElementById("img1").style.visibility = "visible"
    }
@@ -106,7 +106,7 @@
    <div style="margin-top:2em">                    <!-- line 4 (answer) -->
     <input id="answerBox" type="text" autofocus onkeyup="setTimeout(function() { nextStep('answerBox','box1-1',3811,'Add the digits for the first number'); }, 2000);" />
     <input class="largeBox" type="text" id="box4-1" onkeyup="setTimeout(function() { nextStep('box4-1','box4-2',4,'Add the digits of the number you just entered'); }, 500);"/>
-    <input class="smallBox" type="text" id="box4-2" onkeyup="setTimeout(function() { nextStep('box4-2','box2-4',4,'Do the values match?'),EndFunction(); }, 500)";/>
+    <input class="smallBox" type="text" id="box4-2" onkeyup="setTimeout(function() { nextStep('box4-2','box2-4',4,'Do the values match?'),endFunction(); }, 500)";/>
    </div>
   </div>	
   <img id="img1" src="https://cloud.githubusercontent.com/assets/24393098/23970522/4a2f4c84-0987-11e7-9bcc-1ae3f8dba1d7.gif" alt="Arrow">
