@@ -14,7 +14,7 @@
     	            var sumtotal = 0						//initialize sum to 0
 		    
   		   // loop for each character
-                   for (var i = 0; i < newword.length; i++) {
+                    for (var i = 0; i < newword.length; i++) {
 		      var newchar = newword.charAt(i).toUpperCase()
 		      var newnumber = newchar.charCodeAt()-64
 		      var newcost = (newnumber/100).toFixed(2)
@@ -27,16 +27,28 @@
                     }
 		       
 		     // add total at end
-		     document.forms.outputForm.output.value = document.forms.outputForm.output.value
+		    document.forms.outputForm.output.value = document.forms.outputForm.output.value
 		         + String.fromCharCode(13) 
 		       	 +"___________________"
 		         + String.fromCharCode(13) 
 		         +"SUM = $" + (sumtotal/100).toFixed(2).toString()
 		       
+                    // blink "Dollar Word" if match
+                    if (sumtotal == 100) {
+                       for (i = 1; i < 4; i++) { 
+                          setTimeout(function() { blinkOn(); }, (i*1000));
+                          setTimeout(function() { blinkOff(); }, (i*1000+500));
+                       }
+                    }
+
 		    document.getElementsByName('input')[0].value = ""   //clear text box for next entry
-		       
-           }       //end if enter pressed 
+
+               }       //end if enter pressed 
          }       //end function
+
+         function blinkOn() {document.getElementById("topDiv").style.visibility = "visible"; }
+         function blinkOff() {document.getElementById("topDiv").style.visibility = "hidden"; }
+
         </script>
 
         <style type="text/css">
@@ -52,12 +64,26 @@
  	        font-family: Verdana, Arial, Helvetica, sans-serif;
 		text-align: center;
                }
+            #bottomDiv{   
+                position: absolute; 
+                width:100%  
+            }
+            #topDiv{
+                margin-top:100px;
+                padding-top:10px;
+                font-size:100px;
+                -ms-transform: rotate(-20deg); /* IE 9 */
+                -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+                transform: rotate(-20deg);
+                visibility: hidden;
+            }
 	</style>
      </head>
 	
      <body>	  
 	<h1> The Dollar Word Calculator </h1> 
 
+      <div id="bottomDiv">
 	<p>Enter a word to check it's value</p> 
 	  
 	<form action="#">   <!-- form for entering data with event handler -->
@@ -69,6 +95,12 @@
 	<form id="outputForm" >     <!-- TextArea Form for Data output -->
 	 <textarea type="text" name="output"></textarea> 
     	</form> 
+     </div>
+
+     <div id="topDiv">
+       <p> Dollar Word! </p>
+     </div>
+
     </body>
 
     <footer class="site-footer">
