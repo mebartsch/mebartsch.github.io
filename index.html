@@ -11,47 +11,39 @@
    	  background-image:url('https://cloud.githubusercontent.com/assets/24393098/21240916/39a93246-c2c2-11e6-8a23-96534b4889d8.gif'), url('https://cloud.githubusercontent.com/assets/24393098/21234756/d2926802-c2a8-11e6-82db-14cebb3d9691.jpg');/*your background image*/  
    	  background-repeat:no-repeat, no-repeat;/*2 pictures, both no repear*/  
    	  background-size:100%, cover;/*1st picture 100% width, 2nd cover page*/  
-   	  /*css hack for ie     
-   	  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cloud.githubusercontent.com/assets/24393098/21234756/d2926802-c2a8-11e6-82db-14cebb3d9691.jpg',sizingMethod='scale');
-   	  -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://cloud.githubusercontent.com/assets/24393098/21234756/d2926802-c2a8-11e6-82db-14cebb3d9691.jpg.jpg',sizingMethod='scale')"; */
-	}
+        }
 
-      ul {
-         position: fixed; 
-         bottom: 10vmin; /*align 10% from bottom*/
-         left: 0px; 
-         list-style: none;
-/*	 list-style-position: inside;  
-         list-style-image: url('https://cloud.githubusercontent.com/assets/24393098/21241996/0d1d0798-c2c7-11e6-8b9a-7b42cc6e5d19.gif');	      
-*/
-	 }  	
+        ul {
+          position: absolute; 
+          bottom: 10vmin; /*align 10% from bottom*/
+     /*     left: 0px;  */
+          list-style: none;
+        }  	
 	    
-      li a {
-        color: White;
-        font-family: 'Mountains of Christmas', cursive;      
-	font-size: 6vmin; /*6% of screen size = 65px (for height=1080) */
-	font-weight: bold;
-	text-decoration: none; /*remove underline*/
-	padding-right: 100px; padding-left: 8vmin; /*make room for bullet*/
-      }  
-
-      ul > li {  /*normal opacity when no hover*/
-	opacity: 1.0;
-      } 
-      ul:hover > li:not(:hover) {  /*all list entries, opacity = 50% when not hovered*/ 
-	opacity: 0.5;
-      }
-      li:hover {   /*enable bullet when hover */
-        background: url(https://cloud.githubusercontent.com/assets/24393098/21273069/c3a86f70-c376-11e6-86ba-e06bc270d37d.gif); /*wand*/
-        background-repeat: no-repeat;
-	background-position: 0px;
-	background-size: 6vmin 6vmin;
-
-     }  	    
+        li a {
+          color: white;
+          font-family: 'Mountains of Christmas', cursive;      
+	  font-size: 6vmin; /*6% of screen size = 65px (for height=1080) */
+	  font-weight: bold;
+	  text-decoration: none; /*remove underline*/
+	  padding-right: 100px; padding-left: 8vmin; /*make room for bullet*/
+        }  
+       /*parent > child */
+        ul > li {  /*normal opacity when no hover anywhere*/
+	  opacity: 1.0;
+        } 
+        ul:hover > li:not(:hover) {  /*50% when hovered on list(ul) but not on line(li)*/ 
+	  opacity: 0.5;
+        }
+        li:hover {   /*enable custom bullet when hover */
+          background: url(https://cloud.githubusercontent.com/assets/24393098/21273069/c3a86f70-c376-11e6-86ba-e06bc270d37d.gif); /*wand*/
+          background-repeat: no-repeat;
+	  background-position: 0px;
+	  background-size: 6vmin 6vmin;
+        }  	    
     </style>	  
   </head>
   <body>
-	
      <nav> <ul>
        <li><a href="/blog">My Blog</a></li> 
        <li><a href="/stuff">My Stuff</a></li>
@@ -59,8 +51,8 @@
        <li><a href="/projects">My Projects</a></li>
     </ul></nav>  
 
-	<footer class="site-footer">
-	</footer>
+    <footer class="site-footer">
+    </footer>
   </body>
 </html>
 
