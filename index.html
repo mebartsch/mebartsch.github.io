@@ -16,7 +16,6 @@
         ul {
           position: absolute; 
           bottom: 10vmin; /*align 10% from bottom*/
-     /*     left: 0px;  */
           list-style: none;
         }  	
 	    
@@ -30,7 +29,7 @@
         }  
        /*parent > child */
         ul > li {  /*normal opacity when no hover anywhere*/
-	  opacity: 1.0;
+	  opacity: 1.0; 
         } 
         ul:hover > li:not(:hover) {  /*50% when hovered on list(ul) but not on line(li)*/ 
 	  opacity: 0.5;
