@@ -5,6 +5,7 @@
 <h1>
   <p id="demo"> </p>
 </h1>
+  
 <script>
 var count = 0;
 var curDate = new Date();
@@ -16,8 +17,9 @@ var endDate = new Date("June 16, 2017");
           count++;
         curDate.setDate(curDate.getDate() + 1);
     }
-
-  document.getElementById("demo").innerHTML = count + " Days Left Before Summer!";
+  
+  count--; //subtract for holidays
+  document.getElementById("demo").innerHTML = count + " Days Of School Left!";
 
 </script>
 
