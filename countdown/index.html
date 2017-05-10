@@ -2,24 +2,23 @@
 <html>
 <body>
 
-<h1>My First Web Page 3</h1>
+<h1>My First Web Page 4</h1>
 <p>My First Paragraph</p>
 
 <p id="demo"></p>
 
 <script>
-today = new Date();
-BigDay = new Date("June 16, 2017");
+curDate = new Date();
+endDate = new Date("June 16, 2017");
   
-msPerDay = 24 * 60 * 60 * 1000 ;
-timeLeft = (BigDay.getTime() - today.getTime());
-e_daysLeft = timeLeft / msPerDay;
-daysLeft = Math.floor(e_daysLeft);
-e_hrsLeft = (e_daysLeft - daysLeft)*24;
-hrsLeft = Math.floor(e_hrsLeft);
-minsLeft = Math.floor((e_hrsLeft - hrsLeft)*60);
+   while (curDate <= endDate) {
+        var dayOfWeek = curDate.getDay();
+        if(!((dayOfWeek == 6) || (dayOfWeek == 0)))
+           count++;
+        curDate = curDate.addDays(1);
+    }
 
-  document.getElementById("demo").innerHTML = minsLeft;
+  document.getElementById("demo").innerHTML = count;
 
 </script>
 
