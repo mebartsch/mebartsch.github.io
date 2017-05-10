@@ -9,7 +9,8 @@
 
 <script>
     var count = 0;
-    var curDate = startDate;
+    var curDate = new Date();
+    var endDate = new Date("June 16, 2017");
     while (curDate <= endDate) {
         var dayOfWeek = curDate.getDay();
         if(!((dayOfWeek == 6) || (dayOfWeek == 0)))
