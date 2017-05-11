@@ -11,7 +11,7 @@ var count = 0;
 var curDate = new Date();
   curDate.setHours(0,0,0,0);
 var endDate = new Date("June 16, 2017");
-var holiday = new Date("May 10, 2017");
+var holiday = new Date("May 29, 2017");
   
    while (curDate < endDate) {
         var dayOfWeek = curDate.getDay();
@@ -20,7 +20,7 @@ var holiday = new Date("May 10, 2017");
         curDate.setDate(curDate.getDate() + 1);
     }
  
-  document.getElementById("demo").innerHTML = count + " Days Of School Left! 1";
+  document.getElementById("demo").innerHTML = count + " Days Of School Left!";
 
 </script>
 
