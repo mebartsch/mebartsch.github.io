@@ -14,7 +14,7 @@ var holiday = new Date("May 19, 2017");
   
    while (curDate < endDate) {
         var dayOfWeek = curDate.getDay();
-        if(!( (dayOfWeek == 6) || (dayOfWeek == 0) || (curDate.getTime() == holiday.getDay()) ) )
+        if(!( (dayOfWeek == 6) || (dayOfWeek == 0) || (curDate.getTime() === holiday.getDay()) ) )
           count++;
         curDate.setDate(curDate.getDate() + 1);
     }
