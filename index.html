@@ -39,10 +39,17 @@
           background-repeat: no-repeat;
 	  background-position: 0px;
 	  background-size: 6vmin 6vmin;
-        }  	    
+        }  
+        #daysleft{
+	  text-align: center;
+          font-size:50px;	    
+	}	    
     </style>	  
   </head>
   <body>
+	  
+     <p id="daysleft"> </p>	  
+	  
      <nav> <ul>
        <li><a href="/blog">My Blog</a></li> 
        <li><a href="/stuff">My Stuff</a></li>
@@ -50,6 +57,23 @@
        <li><a href="/projects">My Projects</a></li>
     </ul></nav>  
 
+     <script>
+            var count = 0;
+            var curDate = new Date();
+              curDate.setHours(0,0,0,0);
+            var endDate = new Date("June 16, 2017");
+            var holiday = new Date("May 29, 2017");
+  
+            while (curDate < endDate) {
+              var dayOfWeek = curDate.getDay();
+              if(!( (dayOfWeek == 6) || (dayOfWeek == 0) || (curDate.getTime() == holiday.getTime()) ) )
+		 count++;
+              curDate.setDate(curDate.getDate() + 1);
+             }
+ 
+             document.getElementById("daysleft").innerHTML = count + " Days Of School Left!";
+    </script>	
+	  
     <footer class="site-footer">
     </footer>
   </body>
