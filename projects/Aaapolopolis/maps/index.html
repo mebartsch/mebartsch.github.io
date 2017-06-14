@@ -1,5 +1,109 @@
+<style>
+		#map {
+			margin:0;
+			padding:0;
+			width:100%;
+			height:100%;
+			background:url(https://user-images.githubusercontent.com/24393098/27112911-a30c91b2-506e-11e7-8143-32a2fe17786c.png) top left no-repeat #fff;
+			font-family:arial, helvetica, sans-serif;
+			font-size:8pt;
+		}
+		
+		#map li {
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		
+		#map li a {
+			position:absolute;
+			display:block;
+			/*
+			   Specifying a background image
+			   (a 1px by 1px transparent gif)
+			   fixes a bug in older versions of
+			   IE that causeses the block to not
+			   render at its full dimensions.
+			*/
+   			background:url(blank.gif);
+   			text-decoration:none;
+			color:#000;
+		}
+		
+		#map li a span { display:none; }
+		
+		#map li a:hover span {
+			position:relative;
+			display:block;
+			width:200px;
+			left:20px;
+			top:20px;
+			border:1px solid #000;
+			background:#fff;
+			padding:5px;
+ 			filter:alpha(opacity=80);
+			opacity:0.8;
+  		}
+	
+		#map a.bunny {
+			top:350px;
+			left:700px;
+			width:100px;
+			height:100px;
+		}
+		
+		#map a.parrot {
+			top:250px;
+			left:500px;
+			width:100px;
+			height:100px;
+		}
+		
+		#map a.snail {
+			top:200px;
+			left:400px;
+			width:100px;
+			height:100px;
+		}
+		
+/*	#map a.dog {
+			top:100px;
+			left:150px;
+			width:115px;
+			height:95px;
+		}
+		
+		#map a.cat {
+			top:65px;
+			left:315px;
+			width:70px;
+			height:120px;
+		} */
+</style>
 
-<body bgcolor="green">	  
+<body>
 
-<img src="https://user-images.githubusercontent.com/24393098/27112911-a30c91b2-506e-11e7-8143-32a2fe17786c.png" alt="" />
+<ul id="map">
+	<li><a class="bunny" href="#" title="Bunny"><span><b>Apple Delta</b><br>
+		Lots of Apples Here</span></a></li>
+
+	<li><a class="parrot" href="#" title="Parrot"><span><b>Great Cora Lake</b><br>
+		Lots of water</span></a></li>
+		
+	<li><a class="snail" href="#" title="Snail"><span><b>The Peak</b><br>
+		Very High!"</span></a></li>
+		
+	<li><a class="dog" href="#" title="Dog"><span><b>Dog</b><br>
+		Man's best friend, a protector and commrade of humans for
+		centuries, dogs are faithful, loyal and loving companions.
+		</span></a></li>
+		
+	<li><a class="cat" href="#" title="Cat"><span><b>Cat</b><br>
+		Another popular pet, these felines were once viewd as a
+		sacred creature amont the ancient Egyptians. Independant,
+		sociable, and with a rumbling purr, cats make wonderful
+		pets.</span></a></li>
+</ul>
+
 </body>
+	
